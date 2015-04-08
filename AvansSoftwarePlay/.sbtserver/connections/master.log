@@ -1,19 +1,40 @@
-New log file opened at Wed Apr 08 11:24:22 CEST 2015 by 10472@mjiam
-Taking next connection to: 58374
-New client attempting to connect on port: 58375-58374
-  Address = /145.102.71.212:58374
-This client on port 58375 has uuid 2d1105bc-73e4-4bdf-b4fb-e3e18335617d configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-2d1105bc-73e4-4bdf-b4fb-e3e18335617d
-Taking next connection to: 58374
+New log file opened at Wed Apr 08 11:51:59 CEST 2015 by 11364@mjiam
+Taking next connection to: 58673
+New client attempting to connect on port: 58674-58673
+  Address = /145.102.71.212:58673
+This client on port 58674 has uuid ea863559-f068-4cc8-9241-f309e3c45996 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-ea863559-f068-4cc8-9241-f309e3c45996
+Taking next connection to: 58673
+New client attempting to connect on port: 58675-58673
+  Address = /145.102.71.212:58673
+Handshake exception on socket: 58675
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 58673
+New client attempting to connect on port: 58676-58673
+  Address = /145.102.71.212:58673
+This client on port 58676 has uuid 0cd56421-414e-4647-88ee-a853c08fbe90 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-ea863559-f068-4cc8-9241-f309e3c45996, activator-0cd56421-414e-4647-88ee-a853c08fbe90
+Taking next connection to: 58673
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58374
+Taking next connection to: 58673
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58374
+Taking next connection to: 58673
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58374
+Taking next connection to: 58673
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 58374
+Taking next connection to: 58673
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58673
