@@ -1,0 +1,19 @@
+New log file opened at Wed Apr 08 11:24:22 CEST 2015 by 10472@mjiam
+Taking next connection to: 58374
+New client attempting to connect on port: 58375-58374
+  Address = /145.102.71.212:58374
+This client on port 58375 has uuid 2d1105bc-73e4-4bdf-b4fb-e3e18335617d configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-2d1105bc-73e4-4bdf-b4fb-e3e18335617d
+Taking next connection to: 58374
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58374
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58374
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58374
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 58374

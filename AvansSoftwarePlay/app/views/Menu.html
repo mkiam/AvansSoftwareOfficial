@@ -1,0 +1,170 @@
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="menu.css" rel="stylesheet">
+<title>menu</title>
+<script>
+function hideDiv() { 
+    if (document.getElementById) { // DOM3 = IE5, NS6 
+        document.getElementById('hideshow').style.visibility = 'hidden'; 
+    } else { 
+        if (document.layers) { // Netscape 4 
+            document.hideshow.visibility = 'hidden'; 
+        } else { // IE 4 
+            document.all.hideshow.style.visibility = 'hidden'; 
+        } 
+    } 
+}
+ 
+function showDiv() { 
+    if (document.getElementById) { // DOM3 = IE5, NS6 
+        document.getElementById('hideshow').style.visibility = 'visible'; 
+    } else { 
+        if (document.layers) { // Netscape 4 
+            document.hideshow.visibility = 'visible'; 
+        } else { // IE 4 
+            document.all.hideshow.style.visibility = 'visible'; 
+        } 
+    } 
+}
+</script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="href="Menu.html""><img src="img/logo.png" /></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right">
+					<div class="form-group">
+						<input type="text" class="form-control login"
+							placeholder="Login">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control password"
+							placeholder="Password">
+					</div>
+					<input type="submit" class="btn btn-success" id="signinbtn"
+						value="Connexion">
+				</form>
+			</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+<nav class="options">
+<center><ul>
+<li><b>About this tool</b></li>
+<li>--------------------------------</li>
+<li><a href="javascript:showDiv()">Help</a></li>
+<li><a href="javascript:showDiv()">Authors</a></li>
+<li><a href="https://www.facebook.com/avans?fref=ts">Facebook</a></li>
+<li><a href= "https://twitter.com/avanshogeschool">Twitter</a></li>
+<li><a HREF="mailto:migan_karen@yahoo.fr">Contact us</a></li>
+<li>
+<div id="hideshow" style="visibility: hidden;">
+    <div id="fade"></div> 
+    <div class="popup_block"> 
+        <div class="popup"> 
+            <a href="javascript:hideDiv()">
+                <img src="icon_close.png" class="cntrl" alt="" />
+            </a>
+            <h3>By Yoann LAMEIRE and Karen MIGAN</h3> 
+            <p> 
+               Description
+			   Description
+			   Description
+			   Description
+			   <br/>
+			   <a href="Menu.html">Close</a>
+            </p>
+        </div>
+    </div>
+</div>
+</li>
+</ul></center>
+<center><ul>
+<br/>
+</nav>
+<nav class="options2">
+<center><ul>
+<li><b> Publications</b></li>
+<li>-------------------------------</li>
+<li> List of publications</li>
+<li><a href="search.html"> Search a publication</a></li>
+<li> My account</li>
+<li> My favourites publications</li>
+
+<br/>
+<br/>
+</nav>
+</ul></center>
+</nav>
+
+
+
+<section class="corps">
+<nav>
+<div class="animation"></div>
+</nav>
+<nav>
+<div class="animation2"></div>
+</nav>
+<br/>
+<p><b><i>Publications will appear here:</i></b></p>
+<p>
+Light Ring Position est un jeu qui consiste à gagner le maximum de cases possible en faisant attention aux obstacles.
+<br/>
+Votre mission si vous l'accepter est de gagner la partie. Pour démarrer une partie vous devez être à plusieurs.
+<br/>
+Vous avez la pouvez inviter vos amis à partir de notre application Android en leur ennvoyant un message.
+<br/>
+Ou encore sur le site, sur votre mobile ou de votre tablette consulter la liste de vos amis et en ajouter de nouveaux.
+<br/>
+Vous avez aussi la possibilité de d'échanger  avec eux: le tchat est ouvert 24h sur 24 pour vous permettre de le faire.
+<br/>
+Pour finir, vous êtes informés de toutes les parties qu'elles soient finies ou en attente avec les résultats obtenus.
+<br/>
+Biensûr vous êtes libres de rejoindre une partie en attente quand vous le souhaitez chers visiteurs: vous en avez le droit.
+<br/>
+Ne déchire t-il donc pas ce jeu ???????????? Il ne reste qu'a vous inscrire et vous amuser .).).).).).).).).).).).).).).
+</p>
+
+<br/>
+<br/>
+
+
+  
+
+<TABLE> 
+  <CAPTION><b><i> Options:</i></b></CAPTION> 
+  <TR> 
+  <TH> References</TH> 
+  <TH> Links with other publications</TH> 
+  </TR> 
+  <TR> 
+  <TH> APA style </TH> 
+  </tr>
+  <tr><Th> Word Format1</Th> </tr>
+  <tr><Th> Word Format2</Th></tr> 
+  <tr><Th> Word Format3 </Th></tr>  
+</TABLE> 		
+<center>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<p>All rights reserved - IT departement 2015 - Avans Hogeschool</p></center>
+</section>
+</body>
+</html>
