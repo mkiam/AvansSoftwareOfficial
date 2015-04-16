@@ -6586,7 +6586,7 @@ aside {
 .options{
 position: absolute; top :100px; 
 width: 280px;
-background-image: url(img/vert.jpg);
+background-image: url(../../public/images/vert.jpg);
 border-radius: 10px;
 
 }
@@ -6594,7 +6594,7 @@ border-radius: 10px;
 position: absolute; top :400px; 
 right : 1180px;
 width: 320px;
-background-image: url(img/vert.jpg);
+background-image: url(../../public/images/vert.jpg);
 border-radius: 10px;
 
 }
@@ -6606,14 +6606,14 @@ ul{
 width: 800px;
 right: 300px;
 position: absolute; top :200px; 
-background-image: url(img/corps.png);
+background-image: url(../../public/images/corps.png);
 border-radius: 10px;
 border: 10px inset;
 }
-.animation {
+.animation {                                                        
     width: 78px;
     height: 104px;
-background-image: url(img/avans.png);
+background-image: url(../../public/images/avans.png);
     position: relative;
     -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
     animation: myfirst 5s linear 2s infinite alternate;
@@ -6621,25 +6621,25 @@ background-image: url(img/avans.png);
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst {
-    0%   {background-image: url(img/avans.png); left:0px; top:0px;}
-    25%  {background-image: url(img/avans.png); left:200px; top:0px;}
-    50%  {background-image: url(img/avans.png); left:200px; top:0px;}
-    75%  {background-image: url(img/avans.png); top:0px;}
-    100% {background-image: url(img/avans.png);top:0px;}
+    0%   {background-image: url(../../public/images/avans.png); left:0px; top:0px;}
+    25%  {background-image: url(../../public/images/avans.png); left:200px; top:0px;}
+    50%  {background-image: url(../../public/images/avans.png); left:200px; top:0px;}
+    75%  {background-image: url(../../public/images/avans.png); top:0px;}
+    100% {background-image: url(../../public/images/avans.png);top:0px;}
 }
 
 /* Standard syntax */
 @keyframes myfirst {
-    0%   {background-image: url(img/avans.png);left:0px; top:0px;}
-    25%  {background-image: url(img/avans.png); left:200px; top:0px;}
-    50%  {background-image: url(img/avans.png); top:0px;}
-    75%  {background-image: url(img/avans.png); top:0px;}
-    100% {background-image: url(img/avans.png);top:0px;}
+    0%   {background-image: url(../../public/images/avans.png);left:0px; top:0px;}
+    25%  {background-image: url(../../public/images/avans.png); left:200px; top:0px;}
+    50%  {background-image: url(../../public/images/avans.png); top:0px;}
+    75%  {background-image: url(../../public/images/avans.png); top:0px;}
+    100% {background-image: url(../../public/images/avans.png);top:0px;}
 }
 .animation2 {
     width: 164px;
     height: 40px;
-    background-image: url(img/hoges.png);
+    background-image: url(../../public/images/hoges.png);
     position: relative;
     -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
     animation: myfirst 5s linear 2s infinite alternate;
@@ -6647,11 +6647,11 @@ background-image: url(img/avans.png);
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes myfirst {
-    0%   {background-image: url(img/hoges.png); left:0px; top:0px;}
-    25%  {background-image: url(img/hoges.png);left:300px; top:0px;}
-    50%  {background-image: url(img/hoges.png); top:0px;}
-    75%  {background-image: url(img/hoges.png); top:0px;}
-    100% {background-image: url(img/hoges.png); top:0px;}
+    0%   {background-image: url(../../public/images/hoges.png); left:0px; top:0px;}
+    25%  {background-image: url(../../public/images/hoges.png);left:300px; top:0px;}
+    50%  {background-image: url(../../public/images/hoges.png); top:0px;}
+    75%  {background-image: url(../../public/images/hoges.png); top:0px;}
+    100% {background-image: url(../../public/images/hoges.png); top:0px;}
 }
 
 /* Standard syntax */

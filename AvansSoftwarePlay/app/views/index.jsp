@@ -12,16 +12,13 @@
 <title>Welkom</title>
 
 <!-- Bootstrap core CSS -->
-<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../../public/bootstrap/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
-<link href="bootstrap/css/jumbotron.css" rel="stylesheet">
-<link href="plateau.css" rel="stylesheet">
+<link href="../../public/bootstrap/css/jumbotron.css" rel="stylesheet">
 
 
-<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script src='js/plateau.js'></script>
+
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -41,7 +38,7 @@
 						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
+				<a class="navbar-brand" href="#"><img src="../../public/images/logo.png" /></a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right">
