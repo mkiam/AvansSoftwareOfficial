@@ -6615,7 +6615,6 @@ border: 10px inset;
     height: 104px;
 background-image: url(../../public/images/avans.png);
     position: relative;
-    -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
     animation: myfirst 5s linear 2s infinite alternate;
 }
 
@@ -6641,7 +6640,6 @@ background-image: url(../../public/images/avans.png);
     height: 40px;
     background-image: url(../../public/images/hoges.png);
     position: relative;
-    -webkit-animation: myfirst 5s linear 2s infinite alternate; /* Chrome, Safari, Opera */
     animation: myfirst 5s linear 2s infinite alternate;
 }
 
@@ -6718,3 +6716,40 @@ background-image: url(../../public/images/avans.png);
     right:-20px; 
     top:-20px; 
 }
+.tit{font-size:1.5em;font-weight:900;}
+	.a {color:#0000FF;}
+	.a span{color:#FF0000;}
+    .b {text-align:right;}
+	.t1,.t2{width:160px;}
+	.t16{width:68px;}
+	.t17{width:130px;}
+	.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18,.a19,.a20{font-size:1.05em;font-weight:bold;}
+    .tableau{font-family:calibri;}
+    input,textarea{border:none;}
+	input,textarea{font-family:calibri;font-size:14px;}
+	td textarea {
+		resize: none;
+	}
+	td, th {
+		vertical-align:middle;
+	}
+	.divcss5-max-width img{ max-width:700px; } 
+	.attention{font-size:0.8em;color:#FF0000;}
+	.divcss5-max-width img{ max-width:700px; } 
+	.attention{font-size:0.8em;color:#FF0000;}
+	
+		#cmd {
+			border:1px solid #4494ff;
+			background-color:#fff;
+			padding:5px;
+			display:absolute;
+			position:fixed;
+			right:0;
+			top:50%;
+		}
+		
+		#cmd input {
+			display:block;
+			margin-top:5px;
+			width:100%;
+		}

@@ -1,0 +1,47 @@
+New log file opened at Thu Apr 16 14:50:36 CEST 2015 by 24632@mjiam
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Dev\activator-1.3.2-minimal\AvansSoftwareOfficial\AvansSoftwareOfficial\AvansSoftwarePlay\.sbtserver\connections\master.log))
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Dev\activator-1.3.2-minimal\AvansSoftwareOfficial\AvansSoftwareOfficial\AvansSoftwarePlay\.sbtserver\connections\activator-5b4fa020-06e1-402a-936f-3870d963ac19.log))
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Dev\activator-1.3.2-minimal\AvansSoftwareOfficial\AvansSoftwareOfficial\AvansSoftwarePlay\.sbtserver\master.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Got request: ListenToBuildChange()
+Reading next message from client.
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: (3,ReceivedResponse())
+Got request: SendSyntheticBuildChanged()
+Reading next message from client.
+Got request: KeyLookupRequest(discoveredMainClasses)
+Reading next message from client.
+Got request: KeyLookupRequest(mainClass)
+Reading next message from client.
+Got request: KeyLookupRequest(echo:echoTraceSupported)
+Reading next message from client.
+Got request: KeyLookupRequest(echo:echoPlayVersionReport)
+Reading next message from client.
+Got request: KeyLookupRequest(echo:echoAkkaVersionReport)
+Reading next message from client.
+Got request: KeyLookupRequest(echo:echoTracePlayVersion)
+Reading next message from client.
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,> initialize))
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,> onFailure load-failed))
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,> boot))
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,> reload))
+Sending msg to client activator-5b4fa020-06e1-402a-936f-3870d963ac19: DetachedLogEvent(LogMessage(debug,[Loading] Scanning directory C:\Dev\activator-1.3.2-minimal\AvansSoftwareOfficial\AvansSoftwareOfficial\AvansSoftwarePlay\project))
+Got request: UnlistenToEvents()
+Reading next message from client.
+Got request: UnlistenToBuildChange()
+Reading next message from client.
+Client activator-5b4fa020-06e1-402a-936f-3870d963ac19 EOF, shutting down.
+Stopping client.
+Dropping message (12,ReceivedResponse()) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (0,ReceivedResponse()) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Client activator-5b4fa020-06e1-402a-936f-3870d963ac19 thread exiting.
+Dropping message (4,ReceivedResponse()) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message BuildStructureChanged(MinimalBuildStructure(Vector(file:/C:/Dev/activator-1.3.2-minimal/AvansSoftwareOfficial/AvansSoftwareOfficial/AvansSoftwarePlay/),Vector(MinimalProjectStructure(ProjectReference(file:/C:/Dev/activator-1.3.2-minimal/AvansSoftwareOfficial/AvansSoftwareOfficial/AvansSoftwarePlay/,root),Vector(sbt.plugins.CorePlugin, com.typesafe.sbt.web.SbtWeb, sbt.plugins.InteractionServicePlugin, sbt.plugins.SendEventServicePlugin, sbt.plugins.SerializersPlugin, sbt.plugins.IvyPlugin, com.typesafe.sbt.webdriver.SbtWebDriver, com.typesafe.sbt.jse.SbtJsEngine, com.typesafe.sbt.digest.SbtDigest, sbt.plugins.JvmPlugin, com.typesafe.sbt.jse.SbtJsTask, play.twirl.sbt.SbtTwirl, com.typesafe.sbt.jshint.SbtJSHint, sbt.plugins.JUnitXmlReportPlugin, com.typesafe.sbt.mocha.SbtMocha, com.typesafe.sbt.less.SbtLess, com.typesafe.sbt.rjs.SbtRjs, com.typesafe.sbt.coffeescript.SbtCoffeeScript, sbt.plugins.BackgroundRunPlugin, play.Play, play.PlayJava, play.sbt.forkrun.PlayForkRun))))) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (6,KeyLookupResponse(discoveredMainClasses,Vector(AttributeKey[scala.collection.Seq[java.lang.String]]("discoveredMainClasses") in Scope(Build: file:/C:/Dev/activator-1.3.2-minimal/AvansSoftwareOfficial/AvansSoftwareOfficial/AvansSoftwarePlay/, , Project: ProjectReference(file:/C:/Dev/activator-1.3.2-minimal/AvansSoftwareOfficial/AvansSoftwareOfficial/AvansSoftwarePlay/,root), Config: compile)))) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (7,KeyLookupResponse(mainClass,Vector(AttributeKey[scala.Option[java.lang.String]]("mainClass") in Scope(Build: file:/C:/Dev/activator-1.3.2-minimal/AvansSoftwareOfficial/AvansSoftwareOfficial/AvansSoftwarePlay/, , Project: ProjectReference(file:/C:/Dev/activator-1.3.2-minimal/AvansSoftwareOfficial/AvansSoftwareOfficial/AvansSoftwarePlay/,root), Config: compile)))) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (8,KeyLookupResponse(echo:echoTraceSupported,Vector())) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (9,KeyLookupResponse(echo:echoPlayVersionReport,Vector())) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (10,KeyLookupResponse(echo:echoAkkaVersionReport,Vector())) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (11,KeyLookupResponse(echo:echoTracePlayVersion,Vector())) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19
+Dropping message (13,ReceivedResponse()) to dead client activator-5b4fa020-06e1-402a-936f-3870d963ac19

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>add article</title>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+	<style type="text/css">
+	.tit{font-size:1.5em;font-weight:900;}
+	.a {color:#0000FF;}
+	.a span{color:#FF0000;}
+    .b {text-align:right;}
+	.t1,.t2{width:160px;}
+	.t16{width:68px;}
+	.t17{width:130px;}
+	.a1,.a2,.a3,.a4,.a5,.a6,.a7,.a8,.a9,.a10,.a11,.a12,.a13,.a14,.a15,.a16,.a17,.a18,.a19,.a20{font-size:1.05em;font-weight:bold;}
+    .tableau{font-family:calibri;}
+    input,textarea{border:none;}
+	input,textarea{font-family:calibri;font-size:14px;}
+	td textarea {
+		resize: none;
+	}
+	td, th {
+		vertical-align:middle;
+	}
+	.divcss5-max-width img{ max-width:700px; } 
+	.attention{font-size:0.8em;color:#FF0000;}
+	.divcss5-max-width img{ max-width:700px; } 
+	.attention{font-size:0.8em;color:#FF0000;}
+	
+		#cmd {
+			border:1px solid #4494ff;
+			background-color:#fff;
+			padding:5px;
+			display:absolute;
+			position:fixed;
+			right:0;
+			top:50%;
+		}
+		
+		#cmd input {
+			display:block;
+			margin-top:5px;
+			width:100%;
+		}
+	</style>
+	
+	<script>
+	function textAreaAdjust(o) {
+		o.style.height = "1px";
+		o.style.height = (5+o.scrollHeight)+"px";
+	}
+	</script>
+	<script src="piece_jointe.js"></script>
+</head>
+
+<body>
+<div class="tableau">
+	<form id="mainForm" action="insertion.php" method="POST" enctype="multipart/form-data" id="fiche_form">
+	<table border="1" align="center" cellspacing="0" cellpadding="10" width=900px>
+	    
+		<tfoot>
+			<tr>
+			<td bgcolor="F5F5F5"><div class="a11">Article :</div></td>
+			<td colspan="5">
+			<div id="files">
+			<a href= "javascript:void(0)" onclick="addFile()" >Add an article</a>&nbsp;&nbsp;&nbsp;<span class="attention">(< 5Mo)</span>
+			<input  type="submit" value="Save" />
+			</div>
+			</td>
+			</tr>
+			
+	</table>
+	</div>
+		
+	</form>
+	<script type="text/javascript">
+		var cloneMEP_tmp = $('#MEP').clone();
+		var cloneMAP_tmp = $('#MAP').clone();
+		var i = 2;
+		
+		function addLigne( obj){
+			var cloneMEP = cloneMEP_tmp.clone();
+			var cloneMAP = cloneMAP_tmp.clone();
+			var cloneMEPID = 'MEP' + i;
+			var cloneMAPID = 'MAP' + i;
+			
+			cloneMEP.attr('id', cloneMEPID);
+			cloneMAP.attr('id', cloneMAPID);
+			
+			$('#tableToModify').append(cloneMEP);
+			$('#tableToModify').append(cloneMAP);
+			
+			$('#' + cloneMEPID + ' .a9').html("Détail-text " + i + ":");
+			$('#' + cloneMAPID + ' .a10').html("Détail-image " + i + ":");
+			
+			cloneMEP.find('td').first().append('<button class="closeBtn" >Supprimer</button>');
+			cloneMEP.find('.closeBtn').click(function() {
+				cloneMEP.remove();
+				cloneMAP.remove();
+			});
+			
+			var j = i-1;
+			$('#' + cloneMEPID + ' textarea')
+				.attr("id", "detail" + i)
+				.attr("name", "detail-text[" + j+"]");
+			
+			$('#' + cloneMAPID + ' img').attr("id", "thumbnil" + i);
+			$('#' + cloneMAPID + ' input').attr("onchange", "fileChange(this);showMyImage(this, 'thumbnil" + i + "')");
+			
+			initDetail('#detail' + i);
+			
+			i++;
+		}
+	
+		$("#submitFormCmd").click(function() {
+			$("#mainForm").submit();
+		});
+		
+		initDetail('#detail1');
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
