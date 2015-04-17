@@ -19,7 +19,7 @@ import play.twirl.api.Content;
 import static play.test.Helpers.*;
 import static org.fest.assertions.Assertions.*;
 
-//import Junit;
+import Junit;
 /**
 *
 * Simple (JUnit) tests that can call all parts of a play app.
@@ -33,10 +33,9 @@ public class ApplicationTest {
         int a = 1 + 1;
         assertThat(a).isEqualTo(2);
     }
-
     @Test
     public void renderTemplate() {
-        Content html = views.html.index.render("Your new application is ready.");
+      Content html = views.html.index.render("Your new application is ready.");
         assertThat(contentType(html)).isEqualTo("text/html");
         assertThat(contentAsString(html)).contains("Your new application is ready.");
     }

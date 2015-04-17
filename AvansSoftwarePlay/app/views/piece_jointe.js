@@ -8,7 +8,7 @@ function addFile(){
 	
 	var lkRmvNode = document.createElement('input');
 	lkRmvNode.setAttribute('type', 'button');
-	lkRmvNode.setAttribute('value', 'Supprimer');
+	lkRmvNode.setAttribute('value', 'Remove');
 	lkRmvNode.setAttribute('style', 'color:blue; border-style:outset;font-family:Arial;  text-decoration: underline;border: none; border-width:1px; background:#FFFFFF;position:relative;float:right;margin-right:51.15%')
 	lkRmvNode.onclick = function(event){ removeFileNode(this);}
 	divNode.appendChild(lkRmvNode);
@@ -48,7 +48,7 @@ function fileChange1(target,id) {
 	var filePath = target.value; 
 	var fileSystem = new ActiveXObject("Scripting.FileSystemObject"); 
 	if(!fileSystem.FileExists(filePath)){ 
-	alert("Ce fichier n'existe pas, insérer une fois encore !"); 
+	alert("This file doesn't exists, please try again !"); 
 	return false; 
 	} 
 	var file = fileSystem.GetFile (filePath); 
@@ -59,12 +59,12 @@ function fileChange1(target,id) {
 
 	var size = fileSize / 1024; 
 	if(size>filemaxsize){ 
-	alert("Ce fichier ne peut pas dépasser 5Mo!"); 
+	alert("The size cannot be more then 5Mo!"); 
 	target.value =""; 
 	return false; 
 	} 
 	if(size<=0){ 
-	alert("la taille de ce fichier ne peut pas être 0Mo!"); 
+	alert("The size cannot be 0Mo!"); 
 	target.value =""; 
 	return false; 
 	} 
