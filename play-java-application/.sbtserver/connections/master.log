@@ -1,13 +1,36 @@
-New log file opened at Fri Apr 17 13:03:34 CEST 2015 by 7196@mjiam
-Taking next connection to: 55953
-New client attempting to connect on port: 55954-55953
-  Address = /10.188.12.63:55953
-This client on port 55954 has uuid 13eef661-53f1-443b-bad4-5b1f87895018 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-13eef661-53f1-443b-bad4-5b1f87895018
-Taking next connection to: 55953
+New log file opened at Fri Apr 17 13:29:30 CEST 2015 by 9328@mjiam
+Taking next connection to: 56172
+New client attempting to connect on port: 56173-56172
+  Address = /10.188.12.63:56172
+This client on port 56173 has uuid 2bbd2d57-0c4c-40e4-8508-fa1eba7d6717 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-2bbd2d57-0c4c-40e4-8508-fa1eba7d6717
+Taking next connection to: 56172
+New client attempting to connect on port: 56178-56172
+  Address = /10.188.12.63:56172
+Handshake exception on socket: 56178
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 56172
+New client attempting to connect on port: 56179-56172
+  Address = /10.188.12.63:56172
+This client on port 56179 has uuid 04b9fc09-17a0-4bad-b721-8e2031265ff2 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-2bbd2d57-0c4c-40e4-8508-fa1eba7d6717, play-fork-run-04b9fc09-17a0-4bad-b721-8e2031265ff2
+Taking next connection to: 56172
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 55953
+Taking next connection to: 56172
 Checking to see if clients are empty...
 We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 55953
+Taking next connection to: 56172

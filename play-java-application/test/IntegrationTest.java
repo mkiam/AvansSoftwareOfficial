@@ -1,13 +1,15 @@
+import models.Article;
+
 import org.junit.*;
 
+import play.db.ebean.*;
 import play.mvc.*;
 import play.test.*;
 import play.libs.F.*;
-
 import static play.test.Helpers.*;
 import static org.fest.assertions.Assertions.*;
-
 import static org.fluentlenium.core.filter.FilterConstructor.*;
+import static org.junit.Assert.*;
 
 public class IntegrationTest {
 
@@ -23,6 +25,18 @@ public class IntegrationTest {
                 assertThat(browser.pageSource()).contains("Add Person");
             }
         });
+    }
+    @Test
+    public void createAndRetrieveUser() {
+        // Create a new user and save it
+     Article ar=   new Article("test");
+     ar.save();
+        
+      
+        
+        // Test 
+        assertNotNull(ar);
+        assertEquals("test", ar.title);
     }
 
 }
