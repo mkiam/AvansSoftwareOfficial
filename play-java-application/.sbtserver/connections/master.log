@@ -1,0 +1,36 @@
+New log file opened at Fri Apr 17 10:37:52 CEST 2015 by 4620@mjiam
+Taking next connection to: 49971
+New client attempting to connect on port: 49972-49971
+  Address = /10.188.12.63:49971
+This client on port 49972 has uuid af911960-b0b7-447a-83fe-1c626e65f07c configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-af911960-b0b7-447a-83fe-1c626e65f07c
+Taking next connection to: 49971
+New client attempting to connect on port: 49977-49971
+  Address = /10.188.12.63:49971
+Handshake exception on socket: 49977
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:152)
+	at java.net.SocketInputStream.read(SocketInputStream.java:122)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:235)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:254)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 49971
+New client attempting to connect on port: 49978-49971
+  Address = /10.188.12.63:49971
+This client on port 49978 has uuid 77b6a52a-3d0e-44c8-8e47-e80aae4c8b4b configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-af911960-b0b7-447a-83fe-1c626e65f07c, play-fork-run-77b6a52a-3d0e-44c8-8e47-e80aae4c8b4b
+Taking next connection to: 49971
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 49971
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 49971
