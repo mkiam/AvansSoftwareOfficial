@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="controllers/" kind="src" path="play-java-application/app"/>
+	<classpathentry kind="src" path="play-java-application/app/controllers"/>
+	<classpathentry kind="src" path="play-java-application/test"/>
+	<classpathentry kind="lib" path="play-java-application/activator-launch-1.3.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="play-java-application/bin"/>
+</classpath>

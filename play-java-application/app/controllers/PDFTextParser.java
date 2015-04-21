@@ -1,7 +1,11 @@
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
+
 import org.apache.pdfbox.cos.COSDocument;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -51,8 +55,12 @@ public class PDFTextParser {
 		}
 		return parsedText;
 	}
-	public static void main(String args[]){
-		System.out.println(pdftoText("C:/Users/YOANN/Documents/Status communication in agile software teams - A case study (John Downs, John Hosking, Beryl Plimmer).pdf"));
+	public static void main(String args[]) throws IOException{
+		String article = pdftoText("C:/Users/YOANN/Documents/Status communication in agile software teams - A case study (John Downs, John Hosking, Beryl Plimmer).pdf");
+		//System.out.println(article);
+		ReferencesExtractor extractor = new ReferencesExtractor();
+		String references = extractor.getReferences(article);
+		System.out.println(references);	
 	}
 
 }
