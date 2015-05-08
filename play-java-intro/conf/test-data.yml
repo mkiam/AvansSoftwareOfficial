@@ -1,0 +1,11 @@
+
+# Users
+
+- &tommy !!models.User
+    pseudo:     toto
+    email:      toto.example.com
+    name:       Tommy
+    password:   secret
+    surname:    Heunks
+
+    
