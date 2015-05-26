@@ -1,0 +1,7 @@
+New log file opened at Tue May 12 14:16:39 CEST 2015 by 1316@karen
+Taking next connection to: 49333
+New client attempting to connect on port: 49334-49333
+  Address = /145.102.70.208:49333
+This client on port 49334 has uuid 64ac0c07-7a7f-40f5-b712-8c60927fb02e configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-64ac0c07-7a7f-40f5-b712-8c60927fb02e
+Taking next connection to: 49333

@@ -1,0 +1,26 @@
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:9: value newUsers is not a member of object controllers.Application
+[error] POST    /users                     controllers.Application.newUsers
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: value deleteUsers is not a member of object controllers.Application
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:9: value newUsers is not a member of object controllers.Application
+[error] POST    /users                     controllers.Application.newUsers
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: value deleteUsers is not a member of object controllers.Application
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\conf\routes:10: not found: type long
+[error] POST    /users/:id/delete          controllers.Application.deleteUsers(id:long)
+[error] C:\Users\MJ\AvansSoftwareOfficial\play-java-intro\app\views\index.scala.html:8: value addPerson is not a member of controllers.ReverseApplication
+[error] 	<form method="POST" action="@routes.Application.addPerson()">
+[error] 	                                                ^
+[error] 12 errors found

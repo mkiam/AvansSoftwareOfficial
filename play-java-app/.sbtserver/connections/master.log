@@ -1,0 +1,7 @@
+New log file opened at Tue May 26 13:21:56 CEST 2015 by 3028@karen
+Taking next connection to: 61553
+New client attempting to connect on port: 61554-61553
+  Address = /145.102.71.140:61553
+This client on port 61554 has uuid 0940a8f4-af0b-4a35-bb90-4ed759144d31 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-0940a8f4-af0b-4a35-bb90-4ed759144d31
+Taking next connection to: 61553

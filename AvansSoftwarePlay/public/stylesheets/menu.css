@@ -6610,56 +6610,7 @@ background-image: url(../../public/images/corps.png);
 border-radius: 10px;
 border: 10px inset;
 }
-.animation {                                                        
-    width: 78px;
-    height: 104px;
-background-image: url(../../public/images/avans.png);
-    position: relative;
-    animation: myfirst 5s linear 2s infinite alternate;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
-    0%   {background-image: url(../../public/images/avans.png); left:0px; top:0px;}
-    25%  {background-image: url(../../public/images/avans.png); left:200px; top:0px;}
-    50%  {background-image: url(../../public/images/avans.png); left:200px; top:0px;}
-    75%  {background-image: url(../../public/images/avans.png); top:0px;}
-    100% {background-image: url(../../public/images/avans.png);top:0px;}
-}
-
-/* Standard syntax */
-@keyframes myfirst {
-    0%   {background-image: url(../../public/images/avans.png);left:0px; top:0px;}
-    25%  {background-image: url(../../public/images/avans.png); left:200px; top:0px;}
-    50%  {background-image: url(../../public/images/avans.png); top:0px;}
-    75%  {background-image: url(../../public/images/avans.png); top:0px;}
-    100% {background-image: url(../../public/images/avans.png);top:0px;}
-}
-.animation2 {
-    width: 164px;
-    height: 40px;
-    background-image: url(../../public/images/hoges.png);
-    position: relative;
-    animation: myfirst 5s linear 2s infinite alternate;
-}
-
-/* Chrome, Safari, Opera */
-@-webkit-keyframes myfirst {
-    0%   {background-image: url(../../public/images/hoges.png); left:0px; top:0px;}
-    25%  {background-image: url(../../public/images/hoges.png);left:300px; top:0px;}
-    50%  {background-image: url(../../public/images/hoges.png); top:0px;}
-    75%  {background-image: url(../../public/images/hoges.png); top:0px;}
-    100% {background-image: url(../../public/images/hoges.png); top:0px;}
-}
-
-/* Standard syntax */
-@keyframes myfirst {
-    0%   {background-image: url(img/hoges.png); left:0px; top:0px;}
-    25%  {background-image: url(img/hoges.png); left:300px; top:0px;}
-    50%  {background-image: url(img/hoges.png); left:300px; top:0px;}
-    75%  {background-image: url(img/hoges.png); left:300px; top:0px;}
-    100% {background-image: url(img/hoges.png); left:300px; top:0px;}
-} 
+ 
 
 #hideshow { 
     position:absolute; 
@@ -6753,3 +6704,20 @@ background-image: url(../../public/images/avans.png);
 			margin-top:5px;
 			width:100%;
 		}
+		body{
+		 background-image: url("../../public/images/BACK.png");
+		  background-repeat: repeat;
+		}
+		.logo{
+
+border-radius: 10px;
+border: 5px solid #fff;
+  -moz-box-shadow: 8px 8px 12px #aaa; 
+  -webkit-box-shadow: 8px 8px 12px #aaa; 
+  box-shadow: 8px 8px 12px #555;
+  
+}  .pictureInput {
+      background-image: url(../../public/images/vert.jpg);
+      background-position: 0 1px;
+      background-repeat: no-repeat;
+    }
