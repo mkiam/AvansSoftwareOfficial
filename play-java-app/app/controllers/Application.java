@@ -19,6 +19,7 @@ import javax.swing.text.html.FormView;
 import play.db.ebean.Model;
 import static play.libs.Json.*;
 
+//@With( SecureSocial.class )
 public class Application extends Controller {
 
     public static Result index() {

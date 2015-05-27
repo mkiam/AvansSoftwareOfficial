@@ -6598,3 +6598,5 @@ aside {
     padding: 5px 0;
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.social{ border:0; border-collapse: separate;
+    border-spacing: 10px 50px;}

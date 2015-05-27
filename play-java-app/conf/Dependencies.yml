@@ -1,0 +1,2 @@
+require:
+  -play -> securesocial 0.2.4

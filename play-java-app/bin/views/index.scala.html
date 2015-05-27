@@ -47,7 +47,7 @@
 				<a class="navbar-brand" href="#"><img class = "logo" src='@routes.Assets.at("images/logo.png")' /></a>
 				
 			</div>
-			
+			securesocial.providers=twitter,facebook,google
 			<div id="navbar" class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right" method="POST" action="@routes.Application.authenticate">
 				@helper.form(routes.Application.authenticate) {
@@ -60,7 +60,11 @@
 						<input type="password" required  id="password" name="password" class="form-control password"
 							placeholder="Password">
 					</div>
-	
+					@if(flash.contains("success")) {
+    <p class="success">
+        @flash.get("success")
+    </p>
+}
 					<input type="submit" class="btn btn-success" id="signinbtn"
 						value="Connexion">
 						}
