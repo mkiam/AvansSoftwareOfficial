@@ -50,7 +50,7 @@
 			
 			<div id="navbar" class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right" method="POST" action="@routes.Application.authenticate">
-				
+				@helper.form(routes.Application.authenticate) {
 					<div class="form-group">
 					
 						<input type="text" required id ="login" name="login" class="form-control login"
@@ -60,11 +60,12 @@
 						<input type="password" required  id="password" name="password" class="form-control password"
 							placeholder="Password">
 					</div>
+	
 					<input type="submit" class="btn btn-success" id="signinbtn"
 						value="Connexion">
+						}
 						
-						  
-				</form>
+			
 			
 			</div>
 			<!--/.navbar-collapse -->

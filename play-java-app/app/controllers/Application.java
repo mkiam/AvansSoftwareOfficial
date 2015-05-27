@@ -63,10 +63,15 @@ public class Application extends Controller {
      */
    
    
-	
+    @Security.Authenticated(Secured.class)
     public static Result menu() {
-        return ok(
-            menu.render()
+        return ok(menu.render());
+    }
+    public static Result logout() {
+        session().clear();
+        flash("success", "You've been logged out");
+        return redirect(
+            routes.Application.index()
         );
     }
 	

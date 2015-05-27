@@ -60,7 +60,11 @@
 						<input type="password" required  id="password" name="password" class="form-control password"
 							placeholder="Password">
 					</div>
-	
+					@if(flash.contains("success")) {
+    <p class="success">
+        @flash.get("success")
+    </p>
+}
 					<input type="submit" class="btn btn-success" id="signinbtn"
 						value="Connexion">
 						}
