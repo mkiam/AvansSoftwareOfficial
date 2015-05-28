@@ -1,13 +1,13 @@
-New log file opened at Wed May 27 13:11:28 CEST 2015 by 4268@karen
-Taking next connection to: 53713
-New client attempting to connect on port: 53714-53713
-  Address = /145.102.71.140:53713
-This client on port 53714 has uuid 248c5ead-599a-4127-abb1-63824e83d234 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-248c5ead-599a-4127-abb1-63824e83d234
-Taking next connection to: 53713
-New client attempting to connect on port: 53716-53713
-  Address = /145.102.71.140:53713
-Handshake exception on socket: 53716
+New log file opened at Thu May 28 10:02:21 CEST 2015 by 3788@karen
+Taking next connection to: 59365
+New client attempting to connect on port: 59366-59365
+  Address = /145.102.71.140:59365
+This client on port 59366 has uuid 104c9a96-5da7-44c5-bc5b-98ac9319487a configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-104c9a96-5da7-44c5-bc5b-98ac9319487a
+Taking next connection to: 59365
+New client attempting to connect on port: 59367-59365
+  Address = /145.102.71.140:59365
+Handshake exception on socket: 59367
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -23,30 +23,9 @@ Caused by: java.net.SocketException: Software caused connection abort: recv fail
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 53713
-New client attempting to connect on port: 53717-53713
-  Address = /145.102.71.140:53713
-This client on port 53717 has uuid f7fe4365-656c-4665-9d61-9b61933fb260 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-248c5ead-599a-4127-abb1-63824e83d234, play-fork-run-f7fe4365-656c-4665-9d61-9b61933fb260
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 53713
+Taking next connection to: 59365
+New client attempting to connect on port: 59368-59365
+  Address = /145.102.71.140:59365
+This client on port 59368 has uuid 643a9cc7-b5bb-4489-b52f-5706c5544047 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-104c9a96-5da7-44c5-bc5b-98ac9319487a, play-fork-run-643a9cc7-b5bb-4489-b52f-5706c5544047
+Taking next connection to: 59365
