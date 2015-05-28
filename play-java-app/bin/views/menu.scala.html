@@ -1,0 +1,225 @@
+
+@()
+
+@main("Smart recipes Menu") {
+<!Doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href= '@routes.Assets.at("stylesheets/menu.css")'rel="stylesheet">
+<script type="text/javascript">
+            var show_alert;
+            show_alert = function(){
+                alert("Hello,this is me!");
+            }
+			var hideDiv;
+			hideDiv = function () { 
+    if (document.getElementById) { // DOM3 = IE5, NS6 
+       document.getElementById('hideshow').style.visibility = 'hidden'; 
+   } else { 
+       if (document.layers) { // Netscape 4 
+           document.hideshow.visibility = 'hidden'; 
+      } else { // IE 4 
+           document.all.hideshow.style.visibility = 'hidden'; 
+        } 
+    } 
+}
+ var showDiv;
+			showDiv = function() { 
+   if (document.getElementById) { // DOM3 = IE5, NS6 
+       document.getElementById('hideshow').style.visibility = 'visible'; 
+    } else { 
+       if (document.layers) { // Netscape 4 
+            document.hideshow.visibility = 'visible'; 
+        } else { // IE 4 
+            document.all.hideshow.style.visibility = 'visible'; 
+        } 
+    } 
+}
+    </script
+</head>
+<body style="background-image:url('@routes.Assets.at("images/BACK.png")');">
+
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" ><img class = "logo" src='@routes.Assets.at("images/logo.png")' /></a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+			<div class="navbar-form navbar-right" >
+				<img width="55" src='@routes.Assets.at("images/avatar.png")' />
+				<font color="white"><b>@session.get("login") account</b></font>
+	</div>
+				</div>
+			<!--/.navbar-collapse -->
+		</div>
+	</nav>
+<nav class="options" style="background-image:url('@routes.Assets.at("images/vert.jpg")');">
+<center><ul>
+<li><b>About this site</b></li>
+<li>--------------------------------</li>
+<li>Help</li>
+<li onclick='showDiv()'>Authors</li>
+<li><a href="https://www.facebook.com/avans?fref=ts">Facebook</a></li>
+<li><a href= "https://twitter.com/avanshogeschool">Twitter</a></li>
+<li><a href="mailto:migan_karen@@yahoo.fr">Contact us</a></li>
+<li>
+<div id="hideshow" style="visibility: hidden;">
+   <div id="fade"></div> 
+   <div class="popup_block"> 
+       <div class="popup"> 
+           <h3>By Yoann LAMEIRE and Karen MIGAN</h3> 
+            <p> 
+              Description
+			   Description
+			   Description
+			   Description
+			   <br/>
+			   <a onclick='hideDiv()'>Close</a>
+                  </p>
+        </div>
+    </div>
+</div>
+</li>
+</ul></center>
+<center><ul>
+<br/>
+</nav>
+
+<nav class="options2" style="background-image:url('@routes.Assets.at("images/vert.jpg")');">
+<center><ul>
+<li><b>Recipes</b></li>
+<li>-------------------------------</li>
+<li> Search recipes</li>
+<li> Add recipes recipes</li>
+<li> My favourites recipes</li>
+<li> My account</li>
+<li><a href="@routes.Application.logout()"> Log out</a> </li>
+
+<br/>
+<br/>
+</nav>
+</ul></center>
+</nav>
+
+
+ 
+
+
+<section class="corps" style="background-image:url('@routes.Assets.at("images/corps.png")');">
+
+<br/>
+	
+</head>
+
+<body>
+
+<p><b>Welcome!! @session.get("login") </b> <b>   </b><img src='@routes.Assets.at("images/hey.gif")' /><b>   </b><b> Nice to see you :)</b></p>
+Five Little Ducks
+Five little ducks went swimming one day,
+
+Over the hill and far away.
+
+Mother duck said, QUACK, QUACK, QUACK, QUACK!
+
+And only four little ducks came back!
+
+ 
+
+Four little ducks went swimming one day,
+
+Over the hill and far away.
+
+Mother duck said, QUACK, QUACK, QUACK, QUACK!
+
+And only three little ducks came back!
+
+ 
+
+Three little ducks went swimming one day,
+
+Over the hill and far away.
+
+Mother duck said, QUACK, QUACK, QUACK, QUACK!
+
+And only two little ducks came back!
+
+ 
+
+Two little ducks went swimming one day
+
+Over the hill and far away.
+
+Mother duck said, QUACK, QUACK, QUACK, QUACK!
+
+And only one little duck came back!
+
+ 
+
+One little duck went swimming one day,
+
+Over the hill and far away.
+
+Mother duck said, QUACK, QUACK, QUACK, QUACK!
+
+And all her five little ducks came back!
+		
+	
+	
+	<br/>
+	<br/>
+	<br/>
+<form method= "get">
+ <img src='@routes.Assets.at("images/gauche.png")'/>
+<input type= "text" name= "texte" class="pictureInput" size= "53" placeholder="Type your keywords :)"style="background-image:url('@routes.Assets.at("images/vert.jpg")');" required/>
+<input type= "submit" value="Search"/></form>
+<br/>
+<br/>
+<br/>
+<p><b><i>Your search results:</i></b></p>
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p>All rights reserved - IT departement 2015 - Avans Hogeschool</p></center>
+</section>
+</body>
+</html>
+
+}

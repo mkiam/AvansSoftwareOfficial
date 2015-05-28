@@ -1,0 +1,19 @@
+package models;
+
+import javax.persistence.Id;
+
+import play.db.ebean.Model.Finder;
+
+public class Ingredient {
+	@Id
+	public Long id;
+	public String name;
+	public int quantity;
+	public Ingredient(String name, int quantity) {
+	this.name = name;
+	this.quantity = quantity;
+	}
+	public static Finder<String,Ingredient> find = new Finder<String, Ingredient>(
+			String.class, Ingredient.class
+			);
+}
