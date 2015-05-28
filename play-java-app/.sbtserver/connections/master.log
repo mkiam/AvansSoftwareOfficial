@@ -1,13 +1,13 @@
-New log file opened at Thu May 28 10:02:21 CEST 2015 by 3788@karen
-Taking next connection to: 59365
-New client attempting to connect on port: 59366-59365
-  Address = /145.102.71.140:59365
-This client on port 59366 has uuid 104c9a96-5da7-44c5-bc5b-98ac9319487a configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-104c9a96-5da7-44c5-bc5b-98ac9319487a
-Taking next connection to: 59365
-New client attempting to connect on port: 59367-59365
-  Address = /145.102.71.140:59365
-Handshake exception on socket: 59367
+New log file opened at Thu May 28 12:58:44 CEST 2015 by 7880@karen
+Taking next connection to: 62557
+New client attempting to connect on port: 62558-62557
+  Address = /145.102.71.140:62557
+This client on port 62558 has uuid a322e14f-c64f-44ab-976e-9c63d51ab9e6 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-a322e14f-c64f-44ab-976e-9c63d51ab9e6
+Taking next connection to: 62557
+New client attempting to connect on port: 62559-62557
+  Address = /145.102.71.140:62557
+Handshake exception on socket: 62559
 sbt.impl.ipc.HandshakeException: Unable to perform handshake
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
 	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
@@ -23,9 +23,33 @@ Caused by: java.net.SocketException: Software caused connection abort: recv fail
 	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
 	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
 	... 2 more
-Taking next connection to: 59365
-New client attempting to connect on port: 59368-59365
-  Address = /145.102.71.140:59365
-This client on port 59368 has uuid 643a9cc7-b5bb-4489-b52f-5706c5544047 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
-Connected Clients: activator-104c9a96-5da7-44c5-bc5b-98ac9319487a, play-fork-run-643a9cc7-b5bb-4489-b52f-5706c5544047
-Taking next connection to: 59365
+Taking next connection to: 62557
+New client attempting to connect on port: 62560-62557
+  Address = /145.102.71.140:62557
+This client on port 62560 has uuid a975ba10-ecf8-404a-b69e-04dded67fd2d configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-a322e14f-c64f-44ab-976e-9c63d51ab9e6, play-fork-run-a975ba10-ecf8-404a-b69e-04dded67fd2d
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 62557

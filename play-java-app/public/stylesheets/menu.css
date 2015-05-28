@@ -6596,6 +6596,9 @@ width: 320px;
 border-radius: 10px;
 
 }
+.avatar{
+right : 100px;
+}
 ul{
 	
     list-style-type: none;
