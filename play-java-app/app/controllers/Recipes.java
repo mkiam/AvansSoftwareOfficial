@@ -1,0 +1,33 @@
+package controllers;
+
+import play.mvc.*;
+import static play.data.Form.*;
+import models.*;
+
+
+@Security.Authenticated(Secured.class)
+public class Recipes extends Controller {
+	public static Result add() {
+	    Recipe newRecipe = Recipe.create(
+	        "New recipes",
+	        form().bindFromRequest().get("login")
+	    );
+	    return TODO;
+	}
+	public static Result rename(Long recipe) {
+	    
+	        return ok(
+	            Recipe.rename(
+	                recipe,
+	                form().bindFromRequest().get("name")
+	            )
+	        );
+	    	}
+	public static Result delete(Long recipe) {
+	        Recipe.find.ref(recipe).delete();
+	        return ok();
+	   
+	}
+
+
+}

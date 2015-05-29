@@ -8,6 +8,7 @@ import javax.persistence.ManyToMany;
 
 
 
+
 import play.db.ebean.Model;
 
 
@@ -25,11 +26,11 @@ public class Ingredient extends Model {
 	this.name = name;
 	this.quantity = quantity;
 	}
-	 public static Model.Finder<String,Ingredient> find = new Model.Finder(String.class, Ingredient.class);
+	 public static Model.Finder<Long,Ingredient> find = new Model.Finder(long.class, Ingredient.class);
 
 	   
 
-	    public static Ingredient create(Ingredient ingredient, String recipe, String name, int quantity) {
+	    public static Ingredient create(Ingredient ingredient, Long recipe, String name, int quantity) {
 	        ingredient.recipe = Recipe.find.ref(recipe);
 	        ingredient.name = name;
 	        ingredient.quantity = quantity;

@@ -27,7 +27,7 @@ public class Recipe extends Model {
 	        this.assignedTo = assignedTo;
 	    }
 
-	    public static Model.Finder<String,Recipe> find = new Model.Finder(String.class, Recipe.class);
+	    public static Model.Finder<Long,Recipe> find = new Model.Finder(Long.class, Recipe.class);
 
 	    public static Recipe create(String name, String owner) {
 	        Recipe recipe = new Recipe(name, Person.find.ref(owner));
@@ -41,6 +41,21 @@ public class Recipe extends Model {
 	            .eq("ingredients.name", ingredient)
 	            .findList();
 	    }
+	    public static List<Recipe> findInvolving2(String person) {
+	        return find.where()
+	            .eq("assignedTo", person)
+	            .findList();
+	    }
+
+
+	    public static String rename(Long recipeId, String newName) {
+	        Recipe recipe = find.ref(recipeId);
+	       recipe.name = newName;
+	       recipe.update();
+	        return newName;
+	    }
+
+	    
 	
 	
 

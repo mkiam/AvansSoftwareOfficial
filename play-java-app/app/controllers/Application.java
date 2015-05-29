@@ -75,6 +75,11 @@ public class Application extends Controller {
             routes.Application.index()
         );
     }
+    @Security.Authenticated(Secured.class)
+    public static Result add() {
+        return ok(add.render());
+    }
+    
 	
 
     public static Result authenticate() {
