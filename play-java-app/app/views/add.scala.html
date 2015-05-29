@@ -36,6 +36,7 @@ var addFile;
 addFile = function (){
 	var divNode = document.createElement('div');
 	var fileNode = document.createElement('input');
+	fileNode.setAttribute("required", "required");
 	fileNode.setAttribute('type', 'text');
 	fileNode.setAttribute('name', 'fichier[]');
 	fileNode.onchange = function(event){ fileChange1(this);}
@@ -43,7 +44,7 @@ addFile = function (){
 	
 	var lkRmvNode = document.createElement('input');
 	lkRmvNode.setAttribute('type', 'button');
-	lkRmvNode.setAttribute('value', 'Supprimer');
+	lkRmvNode.setAttribute('value', 'Remove');
 	lkRmvNode.setAttribute('style', 'color:blue; border-style:outset;font-family:Arial;  text-decoration: underline;border: none; border-width:1px; background:#FFFFFF;position:relative;float:right;margin-right:51.15%')
 	lkRmvNode.onclick = function(event){ removeFileNode(this);}
 	divNode.appendChild(lkRmvNode);
