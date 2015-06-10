@@ -5,10 +5,17 @@
 <fullyQualifiedTypeName name="play.db.ebean.Model"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="org.h2.engine.User"/>
+<fullyQualifiedTypeName name="controllers.Application"/>
+<fullyQualifiedTypeName name="controllers.routes"/>
+<fullyQualifiedTypeName name="play.data.DynamicForm"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="play.libs.F"/>
+<fullyQualifiedTypeName name="play.libs.Json"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="models.Recipe"/>
-<fullyQualifiedTypeName name="org.h2.engine.User"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="models.Person"/>
 </qualifiedTypeNameHistroy>

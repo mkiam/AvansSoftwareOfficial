@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recipe>
+    #{list recipe, as:'recipes'}
+    <recipes>
+        <label>${recipes.name}</label>
+        <description>${recipes.ingredients}</description>
+        
+    </recipes>
+#{/list}
+</recipe>

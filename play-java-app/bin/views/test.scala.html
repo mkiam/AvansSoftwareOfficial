@@ -1,0 +1,16 @@
+<script language="JavaScript">
+     function InitializeService(){
+      service.useService(http://localhost:90000/index, 
+	"webService");
+     }
+     var StrYear, StrMonth, StrDay;
+     function GetAge(){
+      StrYear = document.DemoForm.StringYear.value;
+      StrMonth = document.DemoForm.StringMonth.value;
+      StrDay = document.DemoForm.StringDay.value;
+      service.GetAgeService.callService("GetAge", StrYear, StrMonth, StrDay);
+     }
+     function ShowResult(){
+    alert(event.result.value);
+      }
+     </script>

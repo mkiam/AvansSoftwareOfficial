@@ -1,25 +1,19 @@
 package controllers;
+import java.sql.SQLException;
+import java.util.List;
+
 import play.db.*;
 import play.*;
 import play.mvc.*;
 import views.html.*;
 import models.Person;
+import models.Recipe;
 import play.data.Form;
-import static play.data.Form.*;
+import play.libs.F;
+import play.libs.F.Function;
+import play.libs.Json;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
 
-import javax.sql.DataSource;
-import javax.swing.text.html.FormView;
-
-import play.db.ebean.Model;
-import static play.libs.Json.*;
-
-//@With( SecureSocial.class )
 public class Application extends Controller {
 
     public static Result index() {
@@ -27,9 +21,9 @@ public class Application extends Controller {
     	return ok(index.render(null));
     }
    
+  
+     
     
-    
-
     public static Result addPerson() throws SQLException {
     	
     	Person person = Form.form(Person.class).bindFromRequest().get();
@@ -79,7 +73,9 @@ public class Application extends Controller {
     public static Result add() {
         return ok(add.render());
     }
-    
+   
+   
+   
 	
 
     public static Result authenticate() {
@@ -96,6 +92,12 @@ public class Application extends Controller {
             );
         }
     }
+    public static Result addRecipe() {
+    	Recipe recipe = Form.form(Recipe.class).bindFromRequest().get(); 
+    	recipe.save();
+		return TODO;
+    }
+    
     }
 
 

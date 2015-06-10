@@ -1,6 +1,7 @@
 package models;
 
 import play.db.ebean.Model;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -20,15 +21,19 @@ public class Person extends Model {
 		this.name = name;
 		this.password = password;
 	}
+	public Person(String name) {
+		this.name= name;
+		// TODO Auto-generated constructor stub
+	}
 	public static Finder<String,Person> find = new Finder<String,Person>(
 			String.class, Person.class
 			);
-	 public static Person authenticate(String login, String password) {
-	        return find.where().eq("login",login)
-	            .eq("password", password).findUnique();
-	    }
+	public static Person authenticate(String login, String password) {
+		return find.where().eq("login",login)
+				.eq("password", password).findUnique();
+	}
 
-	
+
 
 
 }

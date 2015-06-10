@@ -219,7 +219,6 @@ addFile = function (){
 </nav>
 
 
- 
 
 
 <section class="corps" style="background-image:url('@routes.Assets.at("images/corps.png")');">
@@ -232,19 +231,18 @@ addFile = function (){
 
 <p><b>Welcome!! @session.get("login") </b> <b>   </b><img src='@routes.Assets.at("images/hey.gif")' /><b>   </b><b> Nice to see you :)</b></p>
 	<div class="tableau">
-	<form id="mainForm" action="insertion.php" method="POST" enctype="multipart/form-data" id="fiche_form">
+	<form id="mainForm" action="@routes.Recipes.add()" method="POST" enctype="multipart/form-data" id="fiche_form">
 	<table border="1" align="center" cellspacing="0" cellpadding="10" width=780px>
-	    
-		<tfoot>
+	    <input bgcolor="F5F5F5" type="text" id="name" classe="name" required placeholder="Recipe Name"/>
+	    <input type="hidden" id="assignedTo" class="assignedTo" value=@session.get("login")/>
 			<tr>
-			 <input bgcolor="F5F5F5" type=text id="recipe" classe="recipe" required placeholder="Recipe Name"/>
 			<td bgcolor="F5F5F5"><div class="a11">Ingredients : </div></td>
 			
 			<td colspan="5">
-			<div id="files">
+			<div id="files" class="ingredients">
 			<a href= "javascript:void(0)" onclick="addFile()" >Add an ingredient</a>&nbsp;&nbsp;&nbsp;
-			<input  type="submit" value="Save" />
 			</div>
+			<input  type="submit" value="Save" />
 			</td>
 			</tr>
 			
