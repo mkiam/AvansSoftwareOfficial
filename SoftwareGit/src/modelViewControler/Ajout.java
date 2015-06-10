@@ -22,7 +22,6 @@ public class Ajout extends JFrame implements Observer{
 	private static final long serialVersionUID = 1L;
 	AffichageDuModele aff;
 	final JTextField fichier;
-	final JTextField tfield ;
 	final JFileChooser fc;
 	private Controleur controler;
 	protected ModelInsertion model;
@@ -62,14 +61,7 @@ public class Ajout extends JFrame implements Observer{
 		Container c = this.getContentPane();
 		c.setLayout(new GridLayout(8, 1, 9, 9));
 		c.add(pannelCharger);
-		final JPanel contentPane = new JPanel();
-	    tfield = new JTextField(15);
-		JLabel label1 = new JLabel("Article Name: ");
-
-		contentPane.add(label1);
-		contentPane.add(tfield);
-
-		c.add(contentPane);
+		
 
 		JPanel pa1 = new JPanel();
 		final JButton valider = new JButton(" Submit ");
@@ -229,18 +221,21 @@ public class Ajout extends JFrame implements Observer{
 
 			//Pour les utilisateurs malins
 
-			if (fichier.getText().equals("Select your publication please")|| tfield.getText().isEmpty() ) {
+			if (fichier.getText().equals("Select your publication please")|| fichier.getText().isEmpty()) {
 				JOptionPane.showMessageDialog(a,
 						"Choose an file", "Be careful :)",
 						JOptionPane.WARNING_MESSAGE);
 			} else {
 			
 				try {
+					String nomCourt = (fc.getSelectedFile().getName()!= null) ? fc.getSelectedFile().getName().substring(0,fc.getSelectedFile().getName().indexOf('.')) : "";
+				
 					if (fc.getSelectedFile().getName().endsWith(".doc")){
-						controler.envoieGts2(fichier.getText(),tfield.getText());
+						controler.envoieGts2(fichier.getText(),nomCourt);
 						a.dispose();}
 					if (fc.getSelectedFile().getName().endsWith(".pdf")){
-					controler.envoieGts(fichier.getText(),tfield.getText());
+						
+					controler.envoieGts(fichier.getText(),nomCourt);
 					a.dispose();}
 					
 				} catch (IOException e1) {

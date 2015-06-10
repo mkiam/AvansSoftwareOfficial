@@ -315,8 +315,11 @@ public class PanelAffichage extends JPanel {
 	}
 
 	public void dessinBulle(String j){
-		
-			mxICell a,b,c,d,e,f,g,h,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z;
+		if(!j.equals("software"))
+			return;
+		else{
+
+			mxICell a,b;
 			final mxGraph graph = new mxGraph();
 			Object parent = graph.getDefaultParent();
 
@@ -332,7 +335,7 @@ public class PanelAffichage extends JPanel {
 
 				stmt = con.createStatement();
 				String requete = "SELECT DISTINCT ARTICLENAME FROM ARTICLE WHERE IDISGENERATIONOF IN (SELECT ARTICLE.ID FROM ARTICLE WHERE ARTICLENAME LIKE '%"
-						+ "software" + "%')";
+						+j+ "%')";
 
 				ResultSet rs = stmt.executeQuery(requete);
 
@@ -348,9 +351,9 @@ public class PanelAffichage extends JPanel {
 					b = (mxICell) graph.insertVertex(parent, null,tmp.substring(0,size)+"\n"+tmp.substring(size,tmp.length()), 0, 0, 4*tmp.length(), 100);
 					graph.insertEdge(parent, null, "", a, b);
 				}
-				
 
-			/*	b = (mxICell) graph.insertVertex(parent, null, li.get(0), 0, 0, 100, 30);
+
+				/*	b = (mxICell) graph.insertVertex(parent, null, li.get(0), 0, 0, 100, 30);
 				c = (mxICell) graph.insertVertex(parent, null, li.get(1), 0, 0, 100, 30);
 				d = (mxICell) graph.insertVertex(parent, null, li.get(2), 0, 0, 100, 30);
 				e = (mxICell) graph.insertVertex(parent, null, li.get(3), 0, 0, 100, 30);
@@ -401,6 +404,7 @@ public class PanelAffichage extends JPanel {
 					e1.printStackTrace();
 				}
 
+
 			}
 
 
@@ -426,6 +430,7 @@ public class PanelAffichage extends JPanel {
 
 		}
 	}
+}
 
 
 
