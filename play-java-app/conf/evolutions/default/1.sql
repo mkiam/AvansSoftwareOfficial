@@ -16,7 +16,7 @@ create table person (
 create table recipe (
   id                        bigint not null,
   name                      varchar(255),
-  assigned_to_id            bigint,
+  assigned_to               varchar(255),
   ingredients               varchar(255),
   constraint pk_recipe primary key (id))
 ;
@@ -25,8 +25,6 @@ create sequence person_seq;
 
 create sequence recipe_seq;
 
-alter table recipe add constraint fk_recipe_assignedTo_1 foreign key (assigned_to_id) references person (id) on delete restrict on update restrict;
-create index ix_recipe_assignedTo_1 on recipe (assigned_to_id);
 
 
 

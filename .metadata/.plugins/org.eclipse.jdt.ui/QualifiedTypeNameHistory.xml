@@ -13,9 +13,11 @@
 <fullyQualifiedTypeName name="play.data.DynamicForm"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="play.libs.F"/>
-<fullyQualifiedTypeName name="play.libs.Json"/>
 <fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="models.Recipe"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="models.Person"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
+<fullyQualifiedTypeName name="play.libs.Json"/>
+<fullyQualifiedTypeName name="models.Recipe"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
 </qualifiedTypeNameHistroy>

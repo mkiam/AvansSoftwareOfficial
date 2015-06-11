@@ -33,12 +33,14 @@
     } 
 }
 var addFile;
+
 addFile = function (){
 	var divNode = document.createElement('div');
 	var fileNode = document.createElement('input');
 	fileNode.setAttribute("required", "required");
 	fileNode.setAttribute('type', 'text');
-	fileNode.setAttribute('name', 'fichier[]');
+	fileNode.setAttribute('name', 'ingredients');
+	fileNode.setAttribute('id', 'ingredients');
 	fileNode.onchange = function(event){ fileChange1(this);}
 	divNode.appendChild(fileNode);
 	
@@ -48,19 +50,30 @@ addFile = function (){
 	lkRmvNode.setAttribute('style', 'color:blue; border-style:outset;font-family:Arial;  text-decoration: underline;border: none; border-width:1px; background:#FFFFFF;position:relative;float:right;margin-right:51.15%')
 	lkRmvNode.onclick = function(event){ removeFileNode(this);}
 	divNode.appendChild(lkRmvNode);
-	document.getElementById('files').appendChild(divNode);
-	
-	
-	
-	
+	document.getElementById('files').appendChild(divNode);	
 	
 }
  var removeFileNode;
  removeFileNode = function ( node){
 	document.getElementById('files').removeChild(node.parentNode);
 }
+var name = document.getElementById("name");
+var ingredients= document.getElementById("ingredients")
+
+
     </script>
 	</form>
+	<script type="text/javascript">
+	var send;
+	send= function(){
+$.ajax({
+    type :  "POST",
+    dataType: 'json',
+    data: '{"name":'+name+'}'&'{"ingredients":'+ingredients+'}' ,
+    url  :  "@routes.Recipes.sayHello()",
+});
+}
+</script>
 	<script type="text/javascript">
 		var cloneMEP_tmp = $('#MEP').clone();
 		var cloneMAP_tmp = $('#MAP').clone();
@@ -231,9 +244,9 @@ addFile = function (){
 
 <p><b>Welcome!! @session.get("login") </b> <b>   </b><img src='@routes.Assets.at("images/hey.gif")' /><b>   </b><b> Nice to see you :)</b></p>
 	<div class="tableau">
-	<form id="mainForm" action="@routes.Recipes.add()" method="POST" enctype="multipart/form-data" id="fiche_form">
+	<form id="mainForm" action="@routes.Recipes.sayHello()" method="POST"id="fiche_form">
 	<table border="1" align="center" cellspacing="0" cellpadding="10" width=780px>
-	    <input bgcolor="F5F5F5" type="text" id="name" classe="name" required placeholder="Recipe Name"/>
+	    <input bgcolor="F5F5F5" type="text" id="name" classe="name" name="name" required placeholder="Recipe Name"/>
 	    <input type="hidden" id="assignedTo" class="assignedTo" value=@session.get("login")/>
 			<tr>
 			<td bgcolor="F5F5F5"><div class="a11">Ingredients : </div></td>

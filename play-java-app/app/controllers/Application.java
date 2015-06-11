@@ -31,9 +31,7 @@ public class Application extends Controller {
     	 session().clear();
          session("login", person.login);
     	
-    	 return redirect(
-                 routes.Application.menu()
-    	            );
+    	 return ok(Json.toJson(person));
     }
 
    
@@ -92,12 +90,7 @@ public class Application extends Controller {
             );
         }
     }
-    public static Result addRecipe() {
-    	Recipe recipe = Form.form(Recipe.class).bindFromRequest().get(); 
-    	recipe.save();
-		return TODO;
-    }
-    
+ 
     }
 
 
