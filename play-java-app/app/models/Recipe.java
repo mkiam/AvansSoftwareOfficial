@@ -1,14 +1,11 @@
 package models;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import play.db.ebean.Model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+
 
 @Entity
 public class Recipe  extends Model {
@@ -16,13 +13,13 @@ public class Recipe  extends Model {
 	public Long id;
 	
 	public String name;
-	public Person assignedTo;
-	@ManyToMany(cascade = CascadeType.ALL)
-	public Manual manual;
+	public String assignedTo;
+	
+	public String manual;
 	
   
-	public Recipe( String name, Person assignedTo) {
-		
+	public Recipe( String name, String assignedTo, String manual) {
+		this.manual= manual;
 		this.name = name;
 		this.assignedTo = assignedTo;
 	}
@@ -34,17 +31,7 @@ public class Recipe  extends Model {
 	public static Finder<Long,Recipe> find = new Finder<Long, Recipe>(
 			long.class, Recipe.class
 			);
-	public Manual addManual(Manual toAdd){
-
-		this.manual= toAdd;
-		
-		return toAdd;
-		
-	}
-	public Manual Manuals(){
-		return manual;
-		
-	}
+	
 	
 
 

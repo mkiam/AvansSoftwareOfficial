@@ -11,6 +11,10 @@ POST    /login                      controllers.Application.authenticate()
 GET     /logout                     controllers.Application.logout()
 GET     /add                        controllers.Application.add()
 GET     /show/:user                 controllers.Application.sayHelloUser(user: Long)
+GET /newRecipe                     controllers.Application.addRecipe()
+GET     /allRecipe                  controllers.Application.searchRecipes()
+GET     /userRecipe                 controllers.Application.myRecipes()
+ 
 
 
 # Map static resources from the /public folder to the /assets URL path

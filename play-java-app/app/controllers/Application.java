@@ -4,7 +4,6 @@ import java.util.List;
 
 import play.mvc.*;
 import views.html.*;
-import models.Manual;
 import models.Person;
 import models.Recipe;
 import play.data.DynamicForm;
@@ -118,11 +117,10 @@ public class Application extends Controller {
 		final String manual = form.get("manual");
 		
 
-		Recipe recipe= new Recipe(name, Person.find.where().eq("login",session("login")).findUnique());
+		Recipe recipe= new Recipe(name, session("login"), manual);
+		
+		
 		recipe.save();
-		Manual newManual= new Manual(recipe, manual);
-		recipe.addManual(newManual);
-
 
 		return ok(Json.toJson("the recipe"+ " "+recipe.name+" "+"is correctly saved"));
 
@@ -135,7 +133,7 @@ public class Application extends Controller {
 
 	}
 	public static Result myRecipes(){
-		return ok(Json.toJson(Recipe.find.where().eq("assignedTo", Person.find.where().eq("login",session("login")).findUnique()).findList()));
+		return ok(Json.toJson(Recipe.find.where().eq("assignedTo", session("login")).findList()));
 
 	}
 
