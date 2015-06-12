@@ -1,0 +1,40 @@
+package models;
+
+import java.util.List;
+
+import play.db.ebean.Model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Recipe  extends Model {
+	@Id
+	public Long id;
+	
+	public String name;
+	public String assignedTo;
+	public List<Ingredient> ingredients;
+  
+	public Recipe( String name,String assignedTo, List<Ingredient> ingredients) {
+		
+		this.name = name;
+		this.ingredients = ingredients;
+		this.assignedTo = assignedTo;
+	}
+	public Recipe(String name) {
+		this.name= name;
+		// TODO Auto-generated constructor stub
+	}
+	public static Finder<String,Person> find = new Finder<String,Person>(
+			String.class, Person.class
+			);
+	public static Person authenticate(String login, String password) {
+		return find.where().eq("login",login)
+				.eq("password", password).findUnique();
+	}
+
+
+
+
+}

@@ -25,8 +25,8 @@ public class Person extends Model {
 		this.name= name;
 		// TODO Auto-generated constructor stub
 	}
-	public static Finder<String,Person> find = new Finder<String,Person>(
-			String.class, Person.class
+	public static Finder<Long,Person> find = new Finder<Long,Person>(
+			Long.class, Person.class
 			);
 	public static Person authenticate(String login, String password) {
 		return find.where().eq("login",login)

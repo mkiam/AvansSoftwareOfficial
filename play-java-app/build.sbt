@@ -6,15 +6,14 @@ lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 libraryDependencies ++= Seq(
   javaJdbc,
-  javaEbean
+  javaEbean,
+  javaWs
 )     
 
-libraryDependencies ++= Seq(
-  javaWs
-)
+
 
 fork in run := true
 
-fork in run := true
+
 
 fork in run := true

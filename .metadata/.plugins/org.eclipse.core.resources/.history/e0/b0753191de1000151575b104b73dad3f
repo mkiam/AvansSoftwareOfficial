@@ -1,0 +1,54 @@
+package models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import play.db.ebean.Model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
+@Entity
+public class Recipe  extends Model {
+	@Id
+	public Long id;
+	
+	public String name;
+	public Person assignedTo;
+	@ManyToMany
+	public List<Ingredient>ingredients= new ArrayList<Ingredient>();
+	
+  
+	public Recipe( String name, Person assignedTo) {
+		
+		this.name = name;
+		this.assignedTo = assignedTo;
+	}
+	public Recipe(String name) {
+		this.name= name;
+		// TODO Auto-generated constructor stub
+	}
+	
+	public static Finder<Long,Recipe> find = new Finder<Long, Recipe>(
+			long.class, Recipe.class
+			);
+	public Ingredient addIngredient(String name){
+		Ingredient toAdd=new Ingredient(this, name); 
+		this.ingredients.add(toAdd);
+		
+		return toAdd;
+		
+	}
+	public List<Ingredient> listIngredients(){
+		return ingredients;
+		
+	}
+	public List<Recipe> listRecipes(Person person){
+		return find.where().eq("assignedTo", person).findList();
+		
+	}
+
+
+}

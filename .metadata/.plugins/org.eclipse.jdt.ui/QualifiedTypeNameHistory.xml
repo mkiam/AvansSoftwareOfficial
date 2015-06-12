@@ -15,9 +15,15 @@
 <fullyQualifiedTypeName name="play.libs.F"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="models.Person"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.node.ObjectNode"/>
 <fullyQualifiedTypeName name="play.libs.Json"/>
 <fullyQualifiedTypeName name="models.Recipe"/>
 <fullyQualifiedTypeName name="com.fasterxml.jackson.databind.JsonNode"/>
+<fullyQualifiedTypeName name="play.api.libs.concurrent.Promise"/>
+<fullyQualifiedTypeName name="play.libs.F.Promise"/>
+<fullyQualifiedTypeName name="org.apache.http.client.protocol.ResponseProcessCookies"/>
+<fullyQualifiedTypeName name="models.Person"/>
+<fullyQualifiedTypeName name="play.libs.ws.WSRequest"/>
+<fullyQualifiedTypeName name="org.springframework.scheduling.annotation.Async"/>
+<fullyQualifiedTypeName name="play.libs.ws.WSResponse"/>
 </qualifiedTypeNameHistroy>

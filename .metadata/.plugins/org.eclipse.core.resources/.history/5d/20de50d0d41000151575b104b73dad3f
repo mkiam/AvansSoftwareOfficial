@@ -1,0 +1,37 @@
+package models;
+
+import java.util.List;
+
+import play.db.ebean.Model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Recipe  extends Model {
+	@Id
+	public Long id;
+	
+	public String name;
+	public Person assignedTo;
+	public List<Ingredient> ingredients;
+  
+	public Recipe( String name, Person assignedTo, List<Ingredient> ingredients) {
+		
+		this.name = name;
+		this.ingredients = ingredients;
+		this.assignedTo = assignedTo;
+	}
+	public Recipe(String name) {
+		this.name= name;
+		// TODO Auto-generated constructor stub
+	}
+	public static Finder<Long,Recipe> find = new Finder<Long, Recipe>(
+			long.class, Recipe.class
+			);
+	
+
+
+
+
+}
