@@ -11,11 +11,11 @@ POST    /login                      controllers.Application.authenticate()
 GET     /logout                     controllers.Application.logout()
 GET     /add                        controllers.Application.add()
 GET     /show/:user                 controllers.Application.sayHelloUser(user: Long)
-GET /newRecipe                     controllers.Application.addRecipe()
-GET     /allRecipe                  controllers.Application.searchRecipes()
-GET     /userRecipe                 controllers.Application.myRecipes()
- 
-
-
+GET     /newRecipe                     controllers.Application.addRecipe()
+GET        /allRecipe                  controllers.Application.searchRecipes()
+GET       /userRecipe                 controllers.Application.myRecipes()
+GET      /allRecipesWS               controllers.Application.allRecipes()
+GET     /findRecipeByUserWS/:user    controllers.Application.findRecipeByUser(user: String)
+GET    /findRecipeByIDWS/:id        controllers.Application.findRecipeByID(id: Long)
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

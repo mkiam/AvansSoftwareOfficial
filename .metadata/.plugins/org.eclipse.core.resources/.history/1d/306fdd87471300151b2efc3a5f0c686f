@@ -14,6 +14,11 @@ import play.libs.Json;
 public class Application extends Controller {
 
 
+
+
+
+
+
 	public static Result sayHello() {
 		List<Person>li=Person.find.findList();
 		return ok (Json.toJson(li));
@@ -26,25 +31,6 @@ public class Application extends Controller {
 
 
 	}
-	public static Result allRecipes() {
-		List<Recipe>li=Recipe.find.findList();
-		return ok (Json.toJson(li));
-
-
-	}
-	
-	public static Result findRecipeByUser(String user) {
-	List <Recipe> r = Recipe.find.where().eq("assignedTo", user).findList();
-		return ok (Json.toJson(r));
-	}
-	public static Result findRecipeByID(Long id) {
-		Recipe r = Recipe.find.byId(id);
-		return ok (Json.toJson(r));
-
-
-	}
-	
-	
 
 	public static Result index() {
 
