@@ -2,10 +2,7 @@ package modelViewControler;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.awt.event.*;
 import java.sql.*;
-import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -57,7 +54,7 @@ public class Recherche extends JPanel implements Observer {
 		liste_gts = new JList<String>(listModel_gts);
 		JScrollPane scroll = new JScrollPane(liste_gts);
 		scroll.setPreferredSize(new Dimension(300, 150));
-		
+
 		contentPane2.add(res);
 		contentPane2.add(scroll);
 		contentPane2.setBorder(BorderFactory.createMatteBorder(0, 2, 3, 2,Color.black));
@@ -78,22 +75,24 @@ public class Recherche extends JPanel implements Observer {
 
 		JButton treeBackward = new JButton("Backward Tree");
 		JButton treeForward = new JButton("Forward Tree");
-		JButton pdf = new JButton("PDF and references");
+		JButton pdf = new JButton("PDF");
+		JButton references = new JButton("References");
 		JButton bublebackward= new JButton("Backward Diagram");
 		JButton bubleForward = new JButton("Forward Diagram");
-		
+
 		contentPane3.add(treeBackward);
 		contentPane3.add(treeForward);
 		contentPane3.add(pdf);
+		contentPane3.add(references);
 		contentPane3.add(bublebackward);
 		contentPane3.add(bubleForward);
-		
 
 
-		//liste_mots_clef.setEnabled(false);
+
 		treeBackward.setEnabled(false);
 		treeForward.setEnabled(false);
 		pdf.setEnabled(false);
+		references.setEnabled(false);
 		bublebackward.setEnabled(false);
 		bubleForward.setEnabled(false);
 
@@ -139,69 +138,21 @@ public class Recherche extends JPanel implements Observer {
 					return;
 				}
 				liste_gts.getSelectedValue();
-				
-				//System.out.println((String) liste_gts.getSelectedValue()+"yes");
 				if ((String) liste_gts.getSelectedValue() != null) {
+					treeBackward.setEnabled(true);
+					treeForward.setEnabled(true);
+					pdf.setEnabled(true);
+					references.setEnabled(true);
+					bublebackward.setEnabled(true);
+					bubleForward.setEnabled(true);
 					controler.affichageObjet((String) liste_gts.getSelectedValue());
 
 				}
-
-
-			/*	Connection c = null;
-				Statement stmt = null;
-				try {
-					Class.forName("org.sqlite.JDBC");
-					c = DriverManager.getConnection("jdbc:sqlite: Article.db");
-					c.setAutoCommit(false);
-
-					stmt = c.createStatement();
-					String requete = "SELECT ARTICLENAME FROM ARTICLE WHERE IDISGENERATIONOF =(SELECT ARTICLE.ID FROM ARTICLE WHERE ARTICLENAME = '"
-							+ ((String) liste_gts.getSelectedValue()) + "')";
-
-					ResultSet rs = stmt.executeQuery(requete);
-
-					//listModel_motscles.removeAllElements();
-					if(rs==null){
-						;
-					}
-
-					int i=0;
-					while (rs.next()) {
-						String tmp = rs.getString("ARTICLENAME");
-						listModel_motscles.addElement((tmp));
-
-					}
-					liste_mots_clef.setEnabled(true);
-
-
-				} catch (Exception e1) {
-					System.err.println(e1.getClass().getName() + ": "
-							+ e1.getMessage());
-					System.exit(0);
-				} finally {
-					try {
-						stmt.close();
-						c.commit();
-						c.close();
-					} catch (SQLException e1) {
-						e1.printStackTrace();
-					}
-
-				}*/
 			}
-
-
 		});
 	}
 
-
-
-
-
-
-
-
-
+	
 
 
 	protected void mettreAJourListeObjet() {
@@ -217,17 +168,10 @@ public class Recherche extends JPanel implements Observer {
 				c = DriverManager.getConnection("jdbc:sqlite:database/Article.db");
 				c.setAutoCommit(false);
 				stmt = c.createStatement();
-				/*
-				 * ARTICLENAME           TEXT, " +  
-    		                     " AUTHORS        TEXT, " + 
-    		                     " YEAR  
-				 */
+
 				String requete = "SELECT DISTINCT ARTICLE.ARTICLENAME FROM ARTICLE WHERE ARTICLENAME LIKE '%"
 						+ tfield.getText()
-						+ "%' OR AUTHORS LIKE '%"
-						+ tfield.getText()
-						+ "%' OR YEAR LIKE '%"
-						+ tfield.getText() + "%';";
+						 + "%';";
 				ResultSet rs = stmt.executeQuery(requete);
 
 				while (rs.next()) {

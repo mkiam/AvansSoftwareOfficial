@@ -4,11 +4,7 @@ package display;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
-import java.awt.Rectangle;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -16,31 +12,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
-
-import javax.swing.JFrame;
-import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-
-
-
-
-
-
-
-
-
-
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
-
 import com.mxgraph.layout.mxIGraphLayout;
 import com.mxgraph.layout.hierarchical.mxHierarchicalLayout;
-import com.mxgraph.model.mxGeometry;
 import com.mxgraph.model.mxICell;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.view.mxGraph;
@@ -97,7 +75,6 @@ public class PanelAffichage extends JPanel {
 			} catch (IOException ex) {
 
 			}
-			JScrollPane scrollPane = new JScrollPane(j);
 		}
 
 
@@ -119,7 +96,7 @@ public class PanelAffichage extends JPanel {
 
 			//tente d'ouvrir en mode lecture
 			in = new FileInputStream(fenetrePrincipale.getChemin()+"/"
-					+"pdf"+ name + ".txt");
+					+"pdf"+name+ ".txt");
 			// Lecture par segment de 0.5Mo
 			byte buffer[] = new byte[512*1024];
 			int nbLecture = 0;
@@ -194,7 +171,7 @@ public class PanelAffichage extends JPanel {
 
 
 
-			int i=0;
+			
 			while (rs.next()) {
 				//Et une branche en plus ! Une !
 				//for(int j1 = 0; j1 < j.size(); j1++){
@@ -270,7 +247,7 @@ public class PanelAffichage extends JPanel {
 				return;
 			}
 
-			int i=0;
+		
 			while (rs.next()) {
 				//Et une branche en plus ! Une !
 				//for(int j1 = 0; j1 < j.size(); j1++){
@@ -315,9 +292,7 @@ public class PanelAffichage extends JPanel {
 	}
 
 	public void dessinBulle(String j){
-		if(!j.equals("software"))
-			return;
-		else{
+		
 
 			mxICell a,b;
 			final mxGraph graph = new mxGraph();
@@ -340,47 +315,18 @@ public class PanelAffichage extends JPanel {
 				ResultSet rs = stmt.executeQuery(requete);
 
 
-				List<String> li= new ArrayList<String>();
-
-				a = (mxICell) graph.insertVertex(parent, null, j+" "+"backward", 0, 0, 480, 40);
+				a = (mxICell) graph.insertVertex(parent, null, j+" "+"backward", 0, 0, 680, 40);
+				
 
 				while (rs.next()) {
 					String tmp=rs.getString("ARTICLENAME");
 					int size= tmp.length()/3;
-					//li.add(rs.getString("ARTICLENAME").substring(0, 15));
 					b = (mxICell) graph.insertVertex(parent, null,tmp.substring(0,size)+"\n"+tmp.substring(size,tmp.length()), 0, 0, 4*tmp.length(), 100);
 					graph.insertEdge(parent, null, "", a, b);
 				}
 
 
-				/*	b = (mxICell) graph.insertVertex(parent, null, li.get(0), 0, 0, 100, 30);
-				c = (mxICell) graph.insertVertex(parent, null, li.get(1), 0, 0, 100, 30);
-				d = (mxICell) graph.insertVertex(parent, null, li.get(2), 0, 0, 100, 30);
-				e = (mxICell) graph.insertVertex(parent, null, li.get(3), 0, 0, 100, 30);
-				f = (mxICell) graph.insertVertex(parent, null, li.get(4), 0, 0, 100, 30);
-				g = (mxICell) graph.insertVertex(parent, null, li.get(5), 0, 0, 100, 30);
-				h = (mxICell) graph.insertVertex(parent, null, li.get(6), 0, 0, 100, 30);
-				i= (mxICell) graph.insertVertex(parent, null, li.get(7), 0, 0, 100, 30);
-				k = (mxICell) graph.insertVertex(parent, null, li.get(8), 0, 0, 100, 30);
-				l = (mxICell) graph.insertVertex(parent, null, li.get(9), 0, 0, 100, 30);
-				m = (mxICell) graph.insertVertex(parent, null, li.get(10), 0, 0, 100, 30);
-				n = (mxICell) graph.insertVertex(parent, null, li.get(11), 0, 0, 100, 30);
-				o = (mxICell) graph.insertVertex(parent, null, li.get(12), 0, 0, 100, 30);
-
-
-				graph.insertEdge(parent, null, "", a, b);
-				graph.insertEdge(parent, null, "", a, c);
-				graph.insertEdge(parent, null, "", a, d);
-				graph.insertEdge(parent, null, "", a, e);
-				graph.insertEdge(parent, null, "", a, f);
-				graph.insertEdge(parent, null, "", a, g);
-				graph.insertEdge(parent, null, "1SRT GENERATION", a, h);
-				graph.insertEdge(parent, null, "", a, i);
-				graph.insertEdge(parent, null, "", a, k);
-				graph.insertEdge(parent, null, "", a, l);
-				graph.insertEdge(parent, null, "", a, m);
-				graph.insertEdge(parent, null, "", a, n);
-				graph.insertEdge(parent, null, "", a, o);*/
+				
 
 
 
@@ -394,6 +340,7 @@ public class PanelAffichage extends JPanel {
 				System.err.println(e1.getClass().getName() + ": "
 						+ e1.getMessage());
 				System.exit(0);
+				return;
 			} finally {
 				try {
 					graph.getModel().endUpdate();
@@ -430,7 +377,5 @@ public class PanelAffichage extends JPanel {
 
 		}
 	}
-}
-
 
 

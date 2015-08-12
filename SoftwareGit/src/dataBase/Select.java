@@ -2,6 +2,7 @@ package dataBase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class Select {
@@ -15,7 +16,9 @@ public class Select {
 
 			stmt = c.createStatement();
 			String sql ="SELECT * FROM ARTICLE";
-			stmt.execute(sql);
+			ResultSet rs=stmt.executeQuery(sql);
+			while(rs.next())
+				System.out.println(rs.getString("ARTICLENAME"));
 			stmt.close();
 			c.close();
 		} catch ( Exception e ) {
@@ -23,6 +26,5 @@ public class Select {
 			System.exit(0);
 		}
 	}
-
 
 }

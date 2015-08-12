@@ -1,0 +1,9 @@
+New log file opened at Tue Jun 23 12:57:39 CEST 2015 by 10944@karen
+Sending msg to client play-fork-run-22a6323c-f4e8-4efb-9dad-8ca221d8e7f5: DetachedLogEvent(LogMessage(debug,sbt server socket logs are in: C:\Users\MJ\AvansSoftwareOfficial\play-java-app\.sbtserver\connections\master.log))
+Sending msg to client play-fork-run-22a6323c-f4e8-4efb-9dad-8ca221d8e7f5: DetachedLogEvent(LogMessage(debug,sbt general server logs are in: C:\Users\MJ\AvansSoftwareOfficial\play-java-app\.sbtserver\master.log))
+Sending msg to client play-fork-run-22a6323c-f4e8-4efb-9dad-8ca221d8e7f5: DetachedLogEvent(LogMessage(debug,sbt client logs are in: C:\Users\MJ\AvansSoftwareOfficial\play-java-app\.sbtserver\connections\play-fork-run-22a6323c-f4e8-4efb-9dad-8ca221d8e7f5.log))
+Reading next message from client.
+Got request: ListenToEvents()
+Reading next message from client.
+Sending msg to client play-fork-run-22a6323c-f4e8-4efb-9dad-8ca221d8e7f5: BackgroundJobStarted(5,BackgroundJobInfo(1,backgroundRun,AttributeKey[sbt.BackgroundJobHandle]("backgroundRun") in Scope(Build: file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/, , Project: ProjectReference(file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/,root), Config: compile)))
+Sending msg to client play-fork-run-22a6323c-f4e8-4efb-9dad-8ca221d8e7f5: (3,ReceivedResponse())

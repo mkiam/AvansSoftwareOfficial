@@ -4,9 +4,8 @@
 	<classpathentry kind="src" path="ressources"/>
 	<classpathentry kind="src" path="database"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/MJ/Downloads/sqlite-jdbc-3.7.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/MJ/Downloads/pdfbox-app-1.8.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/MJ/Downloads/tika-app-1.8.jar"/>
 	<classpathentry kind="lib" path="C:/Users/MJ/Downloads/jgraphx/lib/jgraphx.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MJ/Downloads/tika-app-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/MJ/Downloads/pdfbox-app-1.8.9.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

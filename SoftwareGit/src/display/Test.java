@@ -1,27 +1,44 @@
 package display;
+
+import java.io.BufferedReader;
 import java.io.FileInputStream;
-
-import org.apache.poi.hwpf.extractor.WordExtractor;
-
-
- 
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test {
-	public static void main(String []args){
-		try{
-	   WordExtractor extractor = new WordExtractor (
-               new FileInputStream ("C:/Users/MJ/Documents/test.doc"));
-
-String tmp = extractor.getText ();
-
-String[] tmp2 = tmp.split(".",4);
-for(int i =0;i<tmp2.length;i++){
-	System.out.println(tmp2[i]+"\n");
-}
-		}catch(Exception e) {
-			e.printStackTrace();
-			
-		}
+	public Test(){
+		
 	}
-
+	public List<String> separateur(String chemin){
+	
+		
+		List <String>li= new ArrayList<String>();
+		String tmp="";
+		//lecture du fichier texte	
+		try{
+			InputStream ips=new FileInputStream(chemin); 
+			InputStreamReader ipsr=new InputStreamReader(ips);
+			BufferedReader br=new BufferedReader(ipsr);
+			String ligne;
+			while ((ligne=br.readLine())!=null){
+				if(ligne.endsWith(". ")||ligne.endsWith(".")){
+					li.add(tmp+" "+ligne);
+					tmp="";
+				}
+				else{
+				tmp+=ligne+" ";
+				}
+			
+			
+			}
+		
+			br.close(); 
+		}		
+		catch (Exception e){
+			System.out.println(e.toString());
+		}
+		return li;
+	}
 }

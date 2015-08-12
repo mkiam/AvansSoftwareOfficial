@@ -1,7 +1,7 @@
 package modelViewControler;
 
-import display.Reference;
 import display.ReferencesExtractor;
+import display.Test;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -14,7 +14,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -25,7 +24,6 @@ import java.util.Observable;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -77,8 +75,6 @@ public class ModelInsertion extends Observable {
 			cosDoc = parser.getDocument();
 			pdfStripper = new PDFTextStripper();
 			pdDoc = new PDDocument(cosDoc);
-			//pdfStripper.setStartPage(1);
-			//pdfStripper.setEndPage(6);
 			parsedText = pdfStripper.getText(pdDoc);
 		} catch (Exception e) {
 			System.err
@@ -133,28 +129,25 @@ public class ModelInsertion extends Observable {
 	public void insertion(String chemin, AffichageDuModele f,String publication) throws IOException{
 
 
-
+		System.out.println(publication);
 		String article = pdftoText(chemin);
 		String references;
-		//String publication;
-
-
-		//System.out.println(article);
-		ReferencesExtractor extractor = new ReferencesExtractor();
+		
+		ReferencesExtractor extractor = new ReferencesExtractor(f);
 
 
 		references = extractor.getReferences(article);
-		//publication= extractor.getTitle(article);
+		
 		JOptionPane pane = new JOptionPane(
 				"Are you agree with these references?"+
 						references);
 
 
-		//JDialog dialog = pane.createDialog(new JFrame(), "Dilaog");
+		
 		final JDialog dialog = new JDialog();
 		dialog.setLayout(new BorderLayout());
 
-		//  dialog.setVisible(false);
+	
 
 		dialog.setLocation(395, 10);
 		JScrollPane scroll = new JScrollPane(pane); //scroll pane code added
@@ -184,29 +177,28 @@ public class ModelInsertion extends Observable {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
+
 				dialog.dispose();
+				
 				try{
 					int articleMere=0;
-					//if (options[0].equals(obj)) {
-					//System.out.println("Coucou");
-
-
-					BufferedWriter writer = new BufferedWriter(new FileWriter(f.getChemin()+"/"
-							+"pdf"+ publication + ".txt"));
+					
+					BufferedWriter writer = new BufferedWriter(new FileWriter(new File(f.getChemin()+"/"
+							+"pdf"+ publication + ".txt")));
 					// normalement si le fichier n'existe pas, il est crée à la racine du projet
 					writer.write(String.valueOf(article));
 
 					writer.close();
 
-					BufferedWriter writer2 = new BufferedWriter(new FileWriter(f.getChemin()+"/"
-							+ publication + ".txt"));
+					BufferedWriter writer2 = new BufferedWriter(new FileWriter(new File(f.getChemin()+"/"
+							+ publication + ".txt")));
 					// normalement si le fichier n'existe pas, il est crée à la racine du projet
 					writer2.write(String.valueOf(references));
 
 					writer2.close();
 
 
-					List ref;
+					List <String>ref;
 					String sql1;
 					String sql2;
 					String sql3;
@@ -218,26 +210,17 @@ public class ModelInsertion extends Observable {
 						sql3 ="SELECT ARTICLE.ID FROM ARTICLE WHERE ARTICLENAME LIKE '%"
 								+ publication + "%';";
 						ResultSet rs1=stmt.executeQuery(sql3);
+
 						if(rs1.next()){
 							articleMere =rs1.getInt("ID");
-							System.out.println(articleMere);
-							stmt.close();
-							c.commit();
-							c.close();
 						}else{
 
 
 
 
-							sql1 ="INSERT INTO ARTICLE (ARTICLENAME, PATHREFERENCES, PATHPDF) "
+							sql1 ="INSERT INTO ARTICLE (ARTICLENAME) "
 									+ "VALUES ('"
 									+ publication
-									+ "', '"
-									+  "./ressources/modeles/"
-									+ publication + ".txt"
-									+ "', '"
-									+ "./ressources/pdf/"
-									+ publication + ".txt"
 									+  "' );";
 							stmt.executeUpdate(sql1);
 							sql2 = "SELECT ARTICLE.ID FROM ARTICLE WHERE ARTICLENAME = '"
@@ -248,6 +231,7 @@ public class ModelInsertion extends Observable {
 
 							}
 						}
+
 
 
 					} catch (Exception e1) {
@@ -266,46 +250,30 @@ public class ModelInsertion extends Observable {
 					}
 
 					//On separe les references pour stocker chacune d'entre-elles dans une list
-					ref = extractor.separateReferences(references);
-					//Creation de l'objet reference qui appelle la methode décomposant une reference en author, name et date
+					Test test = new  Test();
+					ref= test.separateur(f.getChemin()+"/"
+							+ publication + ".txt");
+					Class.forName("org.sqlite.JDBC");
+					c = DriverManager.getConnection("jdbc:sqlite:database/Article.db");
+					c.setAutoCommit(false);
+					stmt = c.createStatement();
+					
 
-					for(int i = 1; i<ref.size();i++){
+					for(int i = 0; i<ref.size();i++){
 
-						Reference reference = new Reference();
-						reference.extractAttributes(ref.get(i).toString());
-						String author = reference.getAuthor();
-						String nomReference = reference.getName();
-						String year = reference.getYear();
-
-						//insertion des informations dans la base
-						Class.forName("org.sqlite.JDBC");
-						c = DriverManager.getConnection("jdbc:sqlite:database/Article.db");
-						c.setAutoCommit(false);
-						stmt = c.createStatement();
-						/*
-						 *       " ARTICLENAME           TEXT, " +  
-    		                     " AUTHORS        TEXT, " + 
-    		                     " YEAR           TEXT, " + 
-    		                     "IDISGENERATIONOF  INTEGER, "+
-    		                     " PATHREFERENCES          TEXT, " +
-    		                     " PATHPDF           TEXT, "+
-						 */
-
-						String sql = "INSERT INTO ARTICLE (ARTICLENAME,AUTHORS,YEAR,IDISGENERATIONOF) "
+						String sql = "INSERT INTO ARTICLE (ARTICLENAME,IDISGENERATIONOF) "
 								+ "VALUES ('"
-								+nomReference
-								+ "', '"
-								+ author
-								+ "', '"
-								+ year
+								+ref.get(i)
 								+ "', '"
 								+ articleMere
 								+  "' );";
 						stmt.executeUpdate(sql);
-						stmt.close();
-						c.commit();
-						c.close();
+						
 					}
+					
+					stmt.close();
+					c.commit();
+					c.close();
 
 					//this.setChanged();
 					//this.notifyObservers(articleName);
@@ -319,44 +287,15 @@ public class ModelInsertion extends Observable {
 
 
 	}
-
-
-	public void appelFenetrePrincipale(String objet){
-		dessine=true;
-		this.setChanged();
-		this.notifyObservers(objet);
-
-	}
-	public String stringParserReferences(String s){
-		String result="";
-		String[] tmp2 =s.split(",");
-		for(int i =0;i<tmp2.length;i++){
-			result+= tmp2[i]+"\n";
-		}
-		return result;
-	}
-	public String stringParserPDF(String s){
-		String result="";
-		String[] tmp2 =s.split("");
-		for(int i =0;i<tmp2.length;i++){
-			result+= tmp2[i]+"\n";
-		}
-		return result;
-	}
-
 	public void insertion2(String text, AffichageDuModele a, String text2) throws IOException {
-		String article;
-		String tmp2= wordToTest(text);
-		article= stringParserPDF(tmp2);
-
+		String article = wordToTest(text);
+		System.out.println(article);
 		String references;
+		
+		ReferencesExtractor extractor = new ReferencesExtractor(a);
 
-		ReferencesExtractor extractor = new ReferencesExtractor();
 
-
-		String tmp= extractor.getReferences(tmp2);
-		references = stringParserReferences(tmp);
-		//publication= extractor.getTitle(article);
+		references = extractor.getReferences(article);
 		JOptionPane pane = new JOptionPane(
 				"Are you agree with these references?"+
 						references);
@@ -366,10 +305,10 @@ public class ModelInsertion extends Observable {
 		final JDialog dialog = new JDialog();
 		dialog.setLayout(new BorderLayout());
 
-
+		
 
 		dialog.setLocation(395, 10);
-		JScrollPane scroll = new JScrollPane(pane); //scroll pane code added
+		JScrollPane scroll = new JScrollPane(pane); 
 
 
 		scroll.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -395,16 +334,15 @@ public class ModelInsertion extends Observable {
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+				
 				dialog.dispose();
 				try{
 					int articleMere=0;
-					//if (options[0].equals(obj)) {
-					//System.out.println("Coucou");
+					
 
 
 					BufferedWriter writer = new BufferedWriter(new FileWriter(new File(a.getChemin()+"/"
-							+"pdf"+text2+".txt")));
+							+"pdf"+ text2 + ".txt")));
 					// normalement si le fichier n'existe pas, il est crée à la racine du projet
 					writer.write(String.valueOf(article));
 
@@ -418,7 +356,7 @@ public class ModelInsertion extends Observable {
 					writer2.close();
 
 
-					List ref;
+					List <String>ref;
 					String sql1;
 					String sql2;
 					String sql3;
@@ -439,15 +377,9 @@ public class ModelInsertion extends Observable {
 
 
 
-							sql1 ="INSERT INTO ARTICLE (ARTICLENAME, PATHREFERENCES, PATHPDF) "
+							sql1 ="INSERT INTO ARTICLE (ARTICLENAME) "
 									+ "VALUES ('"
 									+ text2
-									+ "', '"
-									+  "./ressources/modeles/"
-									+ text2 + ".txt"
-									+ "', '"
-									+ "./ressources/pdf/"
-									+ text2 + ".txt"
 									+  "' );";
 							stmt.executeUpdate(sql1);
 							sql2 = "SELECT ARTICLE.ID FROM ARTICLE WHERE ARTICLENAME = '"
@@ -458,6 +390,7 @@ public class ModelInsertion extends Observable {
 
 							}
 						}
+
 
 
 					} catch (Exception e1) {
@@ -476,49 +409,31 @@ public class ModelInsertion extends Observable {
 					}
 
 					//On separe les references pour stocker chacune d'entre-elles dans une list
-					ref = extractor.separateReferences(references);
-					//Creation de l'objet reference qui appelle la methode décomposant une reference en author, name et date
+					Test test= new  Test();
+					ref= test.separateur(a.getChemin()+"/"
+							+ text2 + ".txt");
+					
+					Class.forName("org.sqlite.JDBC");
+					c = DriverManager.getConnection("jdbc:sqlite:database/Article.db");
+					c.setAutoCommit(false);
+					stmt = c.createStatement();
+					for(int i = 0; i<ref.size();i++){
+					
 
-					for(int i = 1; i<ref.size();i++){
-
-						Reference reference = new Reference();
-						reference.extractAttributes(ref.get(i).toString());
-						String author = reference.getAuthor();
-						String nomReference = reference.getName();
-						String year = reference.getYear();
-
-						//insertion des informations dans la base
-						Class.forName("org.sqlite.JDBC");
-						c = DriverManager.getConnection("jdbc:sqlite:database/Article.db");
-						c.setAutoCommit(false);
-						stmt = c.createStatement();
-						/*
-						 *       " ARTICLENAME           TEXT, " +  
-    		                     " AUTHORS        TEXT, " + 
-    		                     " YEAR           TEXT, " + 
-    		                     "IDISGENERATIONOF  INTEGER, "+
-    		                     " PATHREFERENCES          TEXT, " +
-    		                     " PATHPDF           TEXT, "+
-						 */
-
-						String sql = "INSERT INTO ARTICLE (ARTICLENAME,AUTHORS,YEAR,IDISGENERATIONOF) "
+						String sql = "INSERT INTO ARTICLE (ARTICLENAME,IDISGENERATIONOF) "
 								+ "VALUES ('"
-								+nomReference
-								+ "', '"
-								+ author
-								+ "', '"
-								+ year
+								+ref.get(i)
 								+ "', '"
 								+ articleMere
 								+  "' );";
 						stmt.executeUpdate(sql);
-						stmt.close();
-						c.commit();
-						c.close();
+						
 					}
+					stmt.close();
+					c.commit();
+					c.close();
 
-					//this.setChanged();
-					//this.notifyObservers(articleName);
+					
 
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
@@ -530,6 +445,11 @@ public class ModelInsertion extends Observable {
 
 	}
 
+	public void appelFenetrePrincipale(String objet){
+		dessine=true;
+		this.setChanged();
+		this.notifyObservers(objet);
+
+	}
+
 }
-
-

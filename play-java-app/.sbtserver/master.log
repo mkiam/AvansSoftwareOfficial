@@ -1,5 +1,5 @@
-New log file opened at Tue Jun 16 12:59:56 CEST 2015 by 7204@karen
-jvm 7204@karen
+New log file opened at Tue Jun 23 12:02:07 CEST 2015 by 10944@karen
+jvm 10944@karen
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.45-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\MJ\AvansSoftwareOfficial\play-java-app\project, returning: (play-java-app-build)
 Loading project definition from C:\Users\MJ\AvansSoftwareOfficial\play-java-app\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@1ceee9e, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@482b1340, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -67,7 +67,7 @@ Set current project to play-java-intro (in build file:/C:/Users/MJ/AvansSoftware
 > server-handle-next-server-request
 > compile
 Evaluating tasks: compile:compile
-Running task... Cancel: sbt.server.ServerTaskCancellation@4d8c551f, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@5654027, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -84,40 +84,18 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 1 s, completed 16 juin 2015 13:00:07
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/compile:discoveredMainClasses
-Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@4aab3913, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Total time: 1 s, completed 16 juin 2015 13:00:08
+Total time: 1 s, completed 23 juin 2015 12:02:13
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/compile:mainClass
 Evaluating tasks: compile:mainClass
-Running task... Cancel: sbt.server.ServerTaskCancellation@8bdfc23, check cycles: false
-Total time: 0 s, completed 16 juin 2015 13:00:08
+Running task... Cancel: sbt.server.ServerTaskCancellation@3a5d1157, check cycles: false
+Total time: 0 s, completed 23 juin 2015 12:02:14
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/compile:discoveredMainClasses
 Evaluating tasks: compile:discoveredMainClasses
-Running task... Cancel: sbt.server.ServerTaskCancellation@6f5c41d5, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@394920dc, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -134,30 +112,36 @@ Sources indirectly invalidated by:
 	external source: Set()
 All initially invalidated sources: Set()
 
-Total time: 0 s, completed 16 juin 2015 13:00:08
+Total time: 1 s, completed 23 juin 2015 12:02:14
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@6c3e6f8a, check cycles: false
+Total time: 0 s, completed 23 juin 2015 12:02:14
 > server-post-command-cleanup
 > server-handle-next-server-request
 > backgroundRun
 Evaluating tasks: compile:backgroundRun
-Running task... Cancel: sbt.server.ServerTaskCancellation@24c52f05, check cycles: false
-Total time: 0 s, completed 16 juin 2015 13:00:54
+Running task... Cancel: sbt.server.ServerTaskCancellation@64819ff, check cycles: false
+Total time: 0 s, completed 23 juin 2015 12:02:18
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@5f2db531, check cycles: false
-Total time: 0 s, completed 16 juin 2015 13:00:56
+Running task... Cancel: sbt.server.ServerTaskCancellation@75676144, check cycles: false
+Total time: 0 s, completed 23 juin 2015 12:02:20
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@6ab3a313, check cycles: false
-Total time: 0 s, completed 16 juin 2015 13:00:57
+Running task... Cancel: sbt.server.ServerTaskCancellation@2ebbfec, check cycles: false
+Total time: 0 s, completed 23 juin 2015 12:02:21
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@481e6989, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@baad49f, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -180,12 +164,12 @@ Copy resource mappings:
 	(C:\Users\MJ\AvansSoftwareOfficial\play-java-app\conf\routes,C:\Users\MJ\AvansSoftwareOfficial\play-java-app\target\scala-2.10\classes\routes)
 	(C:\Users\MJ\AvansSoftwareOfficial\play-java-app\conf\evolutions\default,C:\Users\MJ\AvansSoftwareOfficial\play-java-app\target\scala-2.10\classes\evolutions\default)
 	(C:\Users\MJ\AvansSoftwareOfficial\play-java-app\conf\evolutions\default\1.sql,C:\Users\MJ\AvansSoftwareOfficial\play-java-app\target\scala-2.10\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 16 juin 2015 13:01:01
+Total time: 1 s, completed 23 juin 2015 12:02:34
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@35902074, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@508f3b55, check cycles: false
 
 Initial source changes: 
 	removed:Set()
@@ -208,6 +192,34 @@ Copy resource mappings:
 	(C:\Users\MJ\AvansSoftwareOfficial\play-java-app\conf\routes,C:\Users\MJ\AvansSoftwareOfficial\play-java-app\target\scala-2.10\classes\routes)
 	(C:\Users\MJ\AvansSoftwareOfficial\play-java-app\conf\evolutions\default,C:\Users\MJ\AvansSoftwareOfficial\play-java-app\target\scala-2.10\classes\evolutions\default)
 	(C:\Users\MJ\AvansSoftwareOfficial\play-java-app\conf\evolutions\default\1.sql,C:\Users\MJ\AvansSoftwareOfficial\play-java-app\target\scala-2.10\classes\evolutions\default\1.sql)
-Total time: 1 s, completed 16 juin 2015 13:01:06
+Total time: 1 s, completed 23 juin 2015 12:02:38
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/compile:mainClass
+Evaluating tasks: compile:mainClass
+Running task... Cancel: sbt.server.ServerTaskCancellation@6a966617, check cycles: false
+Total time: 0 s, completed 23 juin 2015 12:57:36
+> server-post-command-cleanup
+> server-handle-next-server-request
+> {file:/C:/Users/MJ/AvansSoftwareOfficial/play-java-app/}root/compile:discoveredMainClasses
+Evaluating tasks: compile:discoveredMainClasses
+Running task... Cancel: sbt.server.ServerTaskCancellation@64c1a8b3, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set()
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set()
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set()
+
+Total time: 0 s, completed 23 juin 2015 12:57:36
 > server-post-command-cleanup
 > server-handle-next-server-request

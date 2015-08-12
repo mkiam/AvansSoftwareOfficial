@@ -5,8 +5,6 @@ import display.Welcome;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridLayout;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -14,7 +12,6 @@ import java.awt.event.KeyEvent;
 import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,7 +23,6 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextField;
 import javax.swing.KeyStroke;
 
 import java.awt.Toolkit;
@@ -54,7 +50,7 @@ public class AffichageDuModele extends JFrame implements Observer {
 	private String cheminGlobal;
 
 	private ImageIcon closeXIcon = new ImageIcon(AffichageDuModele.class.getResource("/imageMenu/close.gif")
-			/*"./ressources/imageMenu/close.gif"*/);
+	);
 	private Dimension closeButtonSize = new Dimension(
 			closeXIcon.getIconWidth() + 2, closeXIcon.getIconHeight() + 2);
 
@@ -161,14 +157,14 @@ public class AffichageDuModele extends JFrame implements Observer {
 			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane jop = new JOptionPane();
-				String mess = "..................................\n";
-				mess += "...........................................\n";
-				mess += "............................................\n";
-				mess += "..............................................";
+				String mess = "You can add, serach and view refernces in many styles\n";
+				mess += "You can also view all the article text.\n";
+				mess += "The location that you choose at the begiging cannot be changed.\n";
+				mess += "Make sure that you don't delete any files wich are saved by this tool in the location";
 				mess += "\n___________________________________________________\n\n";
-				mess += "................. -> .....................\n";
-				mess += "..................-> .......................\n";
-				mess += "................... -> ....................... \n";
+				mess += "CTRL+A-> To add an article\n";
+				mess += "CTRL+F-> To search an article or to remove the search part from your screen\n";
+				mess += "In the menu file or in options you can find access all the features that provide this tool\n";
 				jop.showMessageDialog(null, mess, "Help",
 						JOptionPane.INFORMATION_MESSAGE);
 			}
@@ -179,9 +175,9 @@ public class AffichageDuModele extends JFrame implements Observer {
 			@SuppressWarnings("static-access")
 			public void actionPerformed(ActionEvent arg0) {
 				JOptionPane jop = new JOptionPane();
-				String mess = ".................................\n";
-				mess += "........................................\n";
-				mess += ".........................................\n";
+				String mess = "This application is made\n";
+				mess += "to allow users to exract and display references\n";
+				mess += "from scientifics articles in word or PDF format\n";
 				mess += "_____________________________________________________________________\n\n";
 				mess += "Made by Yoann Lameire, Karen Migan\n";
 				jop.showMessageDialog(null, mess, "A propos",
@@ -460,7 +456,7 @@ public class AffichageDuModele extends JFrame implements Observer {
 			System.out.println("Opened database successfully");
 
 			stmt = c.createStatement();
-			String sql =/*"DELETE FROM ARTICLE";*/"CREATE TABLE IF NOT EXISTS ARTICLE " +
+			String sql ="CREATE TABLE IF NOT EXISTS ARTICLE " +
 					"(ID INTEGER PRIMARY KEY     AUTOINCREMENT," +
 					" ARTICLENAME           TEXT, " +  
 					" AUTHORS        TEXT, " + 
@@ -534,8 +530,6 @@ public class AffichageDuModele extends JFrame implements Observer {
 
 	}
 
-	@SuppressWarnings("unchecked")
-	@Override
 	public void update(Observable o, Object arg) {
 		if(this.model.dessine){
 			dessine((String)arg);

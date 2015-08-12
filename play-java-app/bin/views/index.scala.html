@@ -60,11 +60,7 @@
 						<input type="password" required  id="password" name="password" class="form-control password"
 							placeholder="Password">
 					</div>
-					@if(flash.contains("success")) {
-    <p class="success">
-        @flash.get("success")
-    </p>
-}
+			
 					<input type="submit" class="btn btn-success" id="signinbtn"
 						value="Connexion">
 						}
@@ -120,7 +116,11 @@
 		<div>
 		<br/>
 		<br/>
-	
+			@if(flash.contains("success")) {
+    <p class="success">
+        @flash.get("success")
+    </p>
+}
 </div>
 <iframe width="395" height="280" src="https://www.youtube.com/embed/t6cG74MPm1U" frameborder="0"></iframe>
 </div>

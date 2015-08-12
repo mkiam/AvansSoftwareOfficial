@@ -1,14 +1,7 @@
 package modelViewControler;
-import java.io.File;
-import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.List;
 
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import java.io.IOException;
+
 
 /**
  * Classe serveant de controleur aux vues de recherhce de fenetre principale et d'ajout
@@ -53,55 +46,7 @@ public class Controleur {
 	 * @throws IOException 
 	 */
 	public void envoieGts(String fichier,String nom) throws IOException{
-		/*Connection c = null;
-		Statement stmt = null;
-		ResultSet rs = null;
-		try {
-			Class.forName("org.sqlite.JDBC");
-			c = DriverManager.getConnection("jdbc:sqlite:Database.db");
-			c.setAutoCommit(false);
-
-			stmt = c.createStatement();
-			 String query = "SELECT * FROM OBJETS3D WHERE NAME='"+ nomObjet + "'";
-			    rs = stmt.executeQuery(query);
-			    
-			    if(!rs.next()) 
-					{
-					
-							rs.close();
-							stmt.close();
-							c.commit();
-							c.close();*/
 					model.insertion(fichier,a, nom);
-					
-							
-						
-					/*}else{
-						alerteDoublon=true;
-						JOptionPane.showMessageDialog(f, "Ce nom existe deja",
-								"Attention", JOptionPane.WARNING_MESSAGE);
-						rs.close();
-						stmt.close();
-						c.commit();
-						c.close();
-					}
-				
-			
-		} catch (Exception e) {
-			System.err.println(e.getClass().getName() + ": " + e.getMessage());
-			System.exit(0);
-		} finally {
-			try {
-
-				rs.close();
-				stmt.close();
-				c.close();
-
-			} catch (Exception e1) {
-				e1.printStackTrace();
-			}
-		}*/
-	
 		}
 		
 		
