@@ -1,5 +1,4 @@
 # AvansSoftwareOfficial
-software with play framework for our internship in Breda
 
 This an erpository to store code of an recipes application which is built by using PlayFramework.
 You can start it by dowload typesafe activator on PlayFramework web site. 
