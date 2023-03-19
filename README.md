@@ -1,6 +1,6 @@
 # AvansSoftwareOfficial
 
-This an erpository to store code of an recipes application which is built by using PlayFramework.
+This is an erpository to store code of an recipes application which is built by using PlayFramework.
 You can start it by dowload typesafe activator on PlayFramework web site. 
 You just have to start the console which is provided with the package that you have download.
 An page will appear in your default browser and like that you can open the app by choosing uit on right side.
