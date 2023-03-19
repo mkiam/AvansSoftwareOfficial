@@ -1,10 +1,10 @@
 # AvansSoftwareOfficial
 
-This is an erpository to store code of an recipes application which is built by using PlayFramework.
+This is an repository to store code of an application which is built by using PlayFramework and citation map tool for phd's students and searchers of Avans Hogeschool) a Dutch high ranked vocational university where we used to study and work since 2013.
 You can start it by dowload typesafe activator on PlayFramework web site. 
-You just have to start the console which is provided with the package that you have download.
+You just have to start the console which is provided with the package that you have downloaded.
 An page will appear in your default browser and like that you can open the app by choosing uit on right side.
-You will have to wait for loading. After start the server by clicking on run in the section run wich is in your left.
+You will have to wait for loading. Afterm start the server by clicking on run in the section run wich is in your left.
 Now click in the same session on localhost address that appears. 
 
 You can use the app!!!
