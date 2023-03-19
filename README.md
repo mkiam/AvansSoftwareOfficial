@@ -1,6 +1,6 @@
 # AvansSoftwareOfficial
 
-This is an repository to store code of an application which is built by using PlayFramework and citation map tool for phd's students and searchers of Avans Hogeschool) a Dutch high ranked vocational university where we used to study and work since 2013.
+This is an repository to store code of an application which is built by using PlayFramework and citation map tool for phd's students and searchers of Avans Hogeschool a Dutch high ranked vocational university where we used to study and work since 2013.
 You can start it by dowload typesafe activator on PlayFramework web site. 
 You just have to start the console which is provided with the package that you have downloaded.
 An page will appear in your default browser and like that you can open the app by choosing uit on right side.
